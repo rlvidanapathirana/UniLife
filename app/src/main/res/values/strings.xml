@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Unilife</string>
+    <string name="home">Home</string>
+    <string name="exam">Exam</string>
+    <string name="event">Event</string>
+    <string name="lecture">Lecture</string>
+</resources>
