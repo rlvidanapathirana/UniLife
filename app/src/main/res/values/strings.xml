@@ -4,4 +4,12 @@
     <string name="exam">Exam</string>
     <string name="event">Event</string>
     <string name="lecture">Lecture</string>
+    <string name="menu">menu</string>
+    <string name="select">select</string>
+    <string name="imageAdd">imageAdd</string>
+    <string name="eventtopic">eventtopic</string>
+    <string name="eventhome">eventhome</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_event">create event</string>
 </resources>
