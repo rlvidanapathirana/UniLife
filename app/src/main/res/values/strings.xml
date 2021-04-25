@@ -4,4 +4,15 @@
     <string name="exam">Exam</string>
     <string name="event">Event</string>
     <string name="lecture">Lecture</string>
+    <string name="exams">Exams</string>
+    <string name="add">add</string>
+    <string name="examHedderLogo">examHedderLogo</string>
+    <string name="addExamTxt">Add Exam</string>
+    <string name="examName">Exam Name</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="place">Place</string>
+    <string name="note">Note</string>
+    <string name="save">SAVE</string>
+    <string name="type">Type</string>
 </resources>

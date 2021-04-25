@@ -3,6 +3,9 @@ package com.shadowsquad.unilife;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
+
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -17,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
+        //Bottom Nav bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
 
