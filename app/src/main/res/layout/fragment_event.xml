@@ -10,10 +10,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout1"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="191dp"
         android:background="@color/theme_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
@@ -23,26 +24,26 @@
             android:layout_width="122dp"
             android:layout_height="76dp"
             android:contentDescription="@string/eventhome"
-            app:layout_constraintBottom_toTopOf="@+id/topicMain"
+            app:layout_constraintBottom_toTopOf="@+id/createEventTopic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.532"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
             app:srcCompat="@drawable/eventhome" />
 
         <TextView
-            android:id="@+id/topicMain"
-            android:layout_width="161dp"
-            android:layout_height="60dp"
+            android:id="@+id/createEventTopic"
+            android:layout_width="211dp"
+            android:layout_height="54dp"
             android:layout_marginTop="16dp"
-            android:text="@string/event"
+            android:text="@string/Event_reminder"
             android:textColor="@color/white"
-            android:textSize="40sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.628"
+            app:layout_constraintHorizontal_bias="0.557"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/eventhome" />
 
@@ -64,17 +65,17 @@
 
         <ImageButton
             android:id="@+id/imageSelect"
-            android:layout_width="42dp"
-            android:layout_height="39dp"
+            android:layout_width="37dp"
+            android:layout_height="35dp"
             android:background="@color/theme_blue"
             android:contentDescription="@string/select"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.761"
-            app:layout_constraintStart_toEndOf="@+id/topicMain"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toEndOf="@+id/createEventTopic"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.816"
+            app:layout_constraintVertical_bias="0.821"
             app:srcCompat="@drawable/select"
             tools:srcCompat="@drawable/select" />
 
@@ -83,8 +84,8 @@
 
     <ImageButton
         android:id="@+id/addEventcrt"
-        android:layout_width="84dp"
-        android:layout_height="69dp"
+        android:layout_width="74dp"
+        android:layout_height="65dp"
         android:background="@color/theme_white"
         android:contentDescription="@string/imageAdd"
         android:scaleType="fitCenter"
