@@ -21,6 +21,7 @@ public class ExamFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
        View View = inflater.inflate(R.layout.fragment_exam,container,false);
 
+       //Exam Page btn link ADD EXAM Fragment page
         ImageButton BtnOpenExam = (ImageButton) View.findViewById(R.id.BtnOpenExam);
         BtnOpenExam.setOnClickListener(new View.OnClickListener() {
             @Override
