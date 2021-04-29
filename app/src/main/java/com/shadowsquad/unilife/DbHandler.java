@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 
 public class DbHandler extends SQLiteOpenHelper {
     private  static  final  int VERSION =1;
-    private  static  final String DB_NAME ="Unilife";
+    private  static  final String DB_NAME ="unilife";
     private  static final String EVENT_TABLE_NAME ="Event";
 
 
@@ -74,5 +74,6 @@ public class DbHandler extends SQLiteOpenHelper {
 
         sqLiteDatabase.insert(EVENT_TABLE_NAME,null,contentValues);
         sqLiteDatabase.close();
+
     }
 }
