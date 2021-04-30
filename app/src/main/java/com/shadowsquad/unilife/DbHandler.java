@@ -2,10 +2,14 @@ package com.shadowsquad.unilife;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DbHandler extends SQLiteOpenHelper {
 
@@ -81,5 +85,38 @@ public class DbHandler extends SQLiteOpenHelper {
         sqLiteDatabase.close();
     }
 
+    //Get All Add Exams
+    public List<ExamModel> getAllInsertedExamModel(){
+
+        List<ExamModel> ExamModels = new ArrayList();
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM " +EXAM_TABLE_NAME;
+
+        Cursor cursor = db.rawQuery(query,null);
+
+
+        if (cursor.moveToFirst()){
+            do {
+                //Create new ExamModel object
+                ExamModel examModel = new ExamModel();
+
+                //set values to the object
+                examModel.setId(cursor.getInt(0));
+                examModel.setExamName(cursor.getString(1));
+                examModel.setDate(cursor.getString(2));
+                examModel.setTime(cursor.getString(3));
+                examModel.setPlace(cursor.getString(4));
+                examModel.setType(cursor.getString(5));
+                examModel.setNote(cursor.getString(6));
+                examModel.setStarted(cursor.getLong(7));
+                examModel.setFinished(cursor.getLong(8));
+
+                //examModels = [obj,obj.]
+                ExamModels.add(examModel);
+                } while (cursor.moveToNext());
+        }
+        return ExamModels;
+
+    }
 
 }
