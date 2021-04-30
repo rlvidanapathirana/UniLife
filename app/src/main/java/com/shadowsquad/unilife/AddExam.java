@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AddExam extends AppCompatActivity {
 
@@ -34,6 +35,8 @@ public class AddExam extends AppCompatActivity {
         dbHandler = new DbHandler(context);
 
 
+
+
         addEx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +51,10 @@ public class AddExam extends AppCompatActivity {
 
                 ExamModel examModel = new ExamModel(userExamName,userDate,userTime, userPlace, userType, userNotes, started,0 );
                 dbHandler.addExam(examModel);
+
+                //Toast Message
+                    String savebtn = "Success";
+                    Toast.makeText(context, savebtn, Toast.LENGTH_SHORT).show();
 
             }
         });
