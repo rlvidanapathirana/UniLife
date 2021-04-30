@@ -13,8 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="190dp"
         android:background="@color/theme_blue"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="-4dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -135,56 +137,75 @@
         <EditText
             android:id="@+id/editTextExamName"
             android:layout_width="311dp"
-            android:layout_height="31dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/txtbox"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/dateTxt"
-            android:layout_marginBottom="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/examNameTxt" />
 
-        <EditText
+<!--        <EditText-->
+<!--            android:id="@+id/editTextDate"-->
+<!--            android:layout_width="311dp"-->
+<!--            android:layout_height="31dp"-->
+<!--            android:background="@drawable/txtbox"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="date"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/timeTxt"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/dateTxt" />-->
+
+        <Button
             android:id="@+id/editTextDate"
             android:layout_width="311dp"
-            android:layout_height="31dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/txtbox"
             android:ems="10"
             android:inputType="date"
             android:textColor="@color/black"
-            android:layout_marginBottom="8dp"
+            app:backgroundTint="@null"
             app:layout_constraintBottom_toTopOf="@+id/timeTxt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dateTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/dateTxt" /> <!-- Background -->
 
-        <EditText
+                    />
+
+        <Button
             android:id="@+id/editTextTime"
             android:layout_width="311dp"
-            android:layout_height="31dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/txtbox"
             android:ems="10"
             android:inputType="time"
             android:textColor="@color/black"
-            android:layout_marginBottom="8dp"
+            app:backgroundTint="@null"
             app:layout_constraintBottom_toTopOf="@+id/placeTxt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.475"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/timeTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/timeTxt" />-- Background -->/>
+
 
         <EditText
             android:id="@+id/editTextPlace"
             android:layout_width="311dp"
-            android:layout_height="31dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/txtbox"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/black"
-            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/typeTxt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -194,12 +215,12 @@
         <EditText
             android:id="@+id/editTextType"
             android:layout_width="311dp"
-            android:layout_height="31dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/txtbox"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/black"
-            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/noteTxt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -209,7 +230,7 @@
         <EditText
             android:id="@+id/editTextNote"
             android:layout_width="310dp"
-            android:layout_height="100dp"
+            android:layout_height="95dp"
             android:background="@drawable/txtbox"
             android:ems="10"
             android:gravity="start|top"
@@ -221,18 +242,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/noteTxt" />
 
-        <Button
-            android:id="@+id/btnAddExamSave"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/save"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/theme_blue"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.887"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNote" />
+                <Button
+                    android:id="@+id/btnAddExamSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/theme_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.887"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextNote" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
