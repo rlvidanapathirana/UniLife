@@ -11,13 +11,12 @@
         android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="191dp"
+        android:layout_marginBottom="40dp"
         android:background="@color/theme_blue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <ImageView
             android:id="@+id/eventhome"
@@ -43,7 +42,6 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.557"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/eventhome" />
 
@@ -86,16 +84,42 @@
         android:id="@+id/addEventcrt"
         android:layout_width="74dp"
         android:layout_height="65dp"
+        android:layout_marginBottom="4dp"
         android:background="@color/theme_white"
         android:contentDescription="@string/imageAdd"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout1"
-        app:layout_constraintVertical_bias="0.973"
+        app:layout_constraintTop_toBottomOf="@+id/listViewboxLayout"
         app:srcCompat="@drawable/plus"
         tools:srcCompat="@drawable/plus" />
+
+    <LinearLayout
+        android:id="@+id/listViewboxLayout"
+        android:layout_width="409dp"
+        android:layout_height="390dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/theme_white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/addEventcrt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout1">
+
+
+        <ListView
+            android:id="@+id/listViewbox"
+            android:layout_width="wrap_content"
+            android:layout_height="362dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="@color/theme_white"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="199dp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

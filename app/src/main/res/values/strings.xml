@@ -11,8 +11,8 @@
     <string name="eventhome">eventhome</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-     <string name="Event_reminder">Event reminder</string>
-     <string name="createimg">createimg</string>
+    <string name="Event_reminder">Event reminder</string>
+    <string name="createimg">createimg</string>
     <string name="create_topic">Create event</string>
     <string name="Event_name">Event name</string>
     <string name="eventnametxt">eventnametxt</string>

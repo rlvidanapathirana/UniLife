@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".todoevent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="343dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+             android:background="@drawable/rounded"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="168dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="136dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="5dp"
+                    android:text=" EVENT NAME"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/eventnameview"
+                    android:layout_width="160dp"
+                    android:layout_height="29dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="3dp"
+                    android:text="  TextView"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="190dp"
+                android:layout_height="150dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/presenterview"
+                    android:layout_width="168dp"
+                    android:layout_height="31dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="24dp"
+                    android:drawableLeft="@drawable/ic_person_24"
+                    android:text=" TextView"
+
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="118dp" />
+
+                <TextView
+                    android:id="@+id/venueview"
+                    android:layout_width="168dp"
+                    android:layout_height="31dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                     android:drawableLeft="@drawable/ic_location_on_24"
+                    android:text=" TextView"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="65dp" />
+                <!--        -->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/startview"-->
+                <!--                    android:layout_width="131dp"-->
+                <!--                    android:layout_height="31dp"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    android:background="@drawable/shorttextbbox"-->
+                <!--                    android:text="TextView"-->
+                <!--                    tools:layout_editor_absoluteX="185dp"-->
+                <!--                    tools:layout_editor_absoluteY="161dp" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/endview"-->
+                <!--                    android:layout_width="131dp"-->
+                <!--                    android:layout_height="31dp"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    android:background="@drawable/shorttextbbox"-->
+                <!--                    android:text="TextView"-->
+                <!--                    tools:layout_editor_absoluteX="16dp"-->
+                <!--                    tools:layout_editor_absoluteY="208dp" />-->
+
+                <TextView
+                    android:id="@+id/dateview"
+                    android:layout_width="168dp"
+                    android:layout_height="31dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+                    android:text=" TextView"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="161dp" />
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/noeview"-->
+                <!--                    android:layout_width="292dp"-->
+                <!--                    android:layout_height="45dp"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    android:background="@drawable/multytextbox"-->
+                <!--                    android:text="TextView"-->
+                <!--                    tools:layout_editor_absoluteX="16dp"-->
+                <!--                    tools:layout_editor_absoluteY="250dp" />-->
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

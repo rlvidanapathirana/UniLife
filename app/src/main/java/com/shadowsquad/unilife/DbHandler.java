@@ -2,10 +2,14 @@ package com.shadowsquad.unilife;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DbHandler extends SQLiteOpenHelper {
     private  static  final  int VERSION =1;
@@ -58,6 +62,7 @@ public class DbHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    //data is added event table
     public void addCreateEvent(EventModle eventModle){
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         ContentValues  contentValues = new ContentValues();
@@ -76,4 +81,37 @@ public class DbHandler extends SQLiteOpenHelper {
         sqLiteDatabase.close();
 
     }
+    //get all inserted data from database
+
+    public List<EventModle> getallInsertedEvents(){
+        List<EventModle> eventModles = new ArrayList();
+        SQLiteDatabase db = getReadableDatabase();
+        String query ="SELECT * FROM " +EVENT_TABLE_NAME;
+
+        Cursor cursor = db.rawQuery(query,null);
+
+        if (cursor.moveToFirst()){
+            do {
+                EventModle eventModle = new EventModle();
+
+                eventModle.setId(cursor.getInt(0));
+                eventModle.setEventName(cursor.getString(1));
+                eventModle.setPresenter(cursor.getString(2));
+                eventModle.setVenue(cursor.getString(3));
+                eventModle.setStatTime(cursor.getString(4));
+                eventModle.setEndTime(cursor.getString(5));
+                eventModle.setDate(cursor.getString(6));
+                eventModle.setNote(cursor.getString(7));
+                eventModle.setFinished(cursor.getLong(8));
+                eventModle.setStarted(cursor.getLong(9));
+
+                eventModles.add(eventModle);
+            }while (cursor.moveToNext());
+
+        }
+        return eventModles;
+
+    }
+
+
 }

@@ -201,44 +201,60 @@
 
         </LinearLayout>
 
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="31dp"
+            android:layout_height="37dp"
             android:layout_marginTop="0dp"
             android:orientation="horizontal">
 
 
-            <EditText
+            <!--            <EditText-->
+            <!--                android:id="@+id/editTextTime2"-->
+            <!--                android:layout_width="155dp"-->
+            <!--                android:layout_height="31dp"-->
+            <!--                android:background="@drawable/shorttextbbox"-->
+            <!--                android:layout_marginLeft="0dp"-->
+            <!--                android:layout_marginTop="0dp"-->
+            <!--                android:layout_marginRight="5dp"-->
+            <!--                 android:ems="10"-->
+            <!--                android:inputType="time"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintHorizontal_bias="0.611"-->
+            <!--                app:layout_constraintStart_toEndOf="@+id/editTextTime"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/endtime" />-->
+            <Button
                 android:id="@+id/editTextTime2"
                 android:layout_width="155dp"
-                android:layout_height="31dp"
+                android:layout_height="35dp"
                 android:background="@drawable/shorttextbbox"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginRight="5dp"
-                 android:ems="10"
-                android:inputType="time"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.611"
-                app:layout_constraintStart_toEndOf="@+id/editTextTime"
-                app:layout_constraintTop_toBottomOf="@+id/endtime" />
+                app:backgroundTint="@null" />
 
-            <EditText
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/editTextTime"-->
+            <!--                android:layout_width="155dp"-->
+            <!--                android:layout_height="31dp"-->
+            <!--                android:layout_marginStart="0dp"-->
+            <!--                android:layout_marginTop="0dp"-->
+            <!--                 android:ems="10"-->
+            <!--                android:background="@drawable/shorttextbbox"-->
+            <!--                android:inputType="time"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/startime" />-->
+            <Button
                 android:id="@+id/editTextTime"
                 android:layout_width="155dp"
-                android:layout_height="31dp"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                 android:ems="10"
+                android:layout_height="35dp"
+                android:layout_marginLeft="3dp"
                 android:background="@drawable/shorttextbbox"
-                android:inputType="time"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/startime" />
+                app:backgroundTint="@null" />
 
         </LinearLayout>
-
 
         <TextView
             android:id="@+id/date"
@@ -254,21 +270,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
 
-        <EditText
+<!--        <EditText-->
+<!--            android:id="@+id/datetxt"-->
+<!--            android:layout_width="155dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="0dp"-->
+<!--            android:layout_marginTop="0dp"-->
+<!--            android:background="@drawable/shorttextbbox"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="date"-->
+<!--            android:text="@string/datecrtpage"-->
+<!--            android:textColor="@color/black"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.111"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/date" />-->
+
+        <Button
             android:id="@+id/datetxt"
             android:layout_width="155dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
+            android:layout_height="35dp"
             android:background="@drawable/shorttextbbox"
-            android:ems="10"
-            android:inputType="date"
-            android:text="@string/datecrtpage"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.111"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/date" />
+            app:backgroundTint="@null"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/note"
