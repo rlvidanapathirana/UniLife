@@ -1,9 +1,9 @@
 package com.shadowsquad.unilife;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.DatePickerDialog;
-import android.app.FragmentTransaction;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -72,7 +72,9 @@ public class AddExam extends AppCompatActivity {
                     String saveBtn = "Success";
                     Toast.makeText(context, saveBtn, Toast.LENGTH_SHORT).show();
 
-
+                //Transaction add exam act to exam frag click save btn  and Reload
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.addExamActivity,new ExamFragment()).commit();
 
 
             }
