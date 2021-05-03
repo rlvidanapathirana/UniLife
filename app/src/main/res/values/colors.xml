@@ -12,4 +12,5 @@
     <color name="theme_white">#f4fafa</color>
     <color name="delete_button">#FF4343</color>
     <color name="shadow_gray">#656262</color>
+    <color name="shadow">#E1E1E6</color>
 </resources>

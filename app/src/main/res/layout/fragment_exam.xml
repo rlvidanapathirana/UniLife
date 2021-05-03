@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/examText"
+            android:id="@+id/calcText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/exams"
@@ -36,7 +36,7 @@
             android:layout_height="89dp"
             android:layout_marginTop="44dp"
             android:contentDescription="@string/examHedderLogo"
-            app:layout_constraintBottom_toTopOf="@+id/examText"
+            app:layout_constraintBottom_toTopOf="@+id/calcText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.542"
             app:layout_constraintStart_toStartOf="parent"
