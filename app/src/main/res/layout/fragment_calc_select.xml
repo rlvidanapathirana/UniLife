@@ -48,4 +48,139 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <FrameLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="411dp"
+        android:layout_height="579dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="369dp"
+            android:layout_height="335dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <LinearLayout
+                android:layout_width="369dp"
+                android:layout_height="335dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/facultyView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/faculty"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="21dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <Spinner
+                    android:id="@+id/facultySpinner"
+                    android:layout_width="328dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    tools:layout_editor_absoluteX="21dp"
+                    tools:layout_editor_absoluteY="59dp" />
+
+                <TextView
+                    android:id="@+id/specializeView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/specialization"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="21dp"
+                    tools:layout_editor_absoluteY="115dp" />
+
+                <Spinner
+                    android:id="@+id/specializeSpinner"
+                    android:layout_width="328dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    tools:layout_editor_absoluteX="21dp"
+                    tools:layout_editor_absoluteY="146dp" />
+
+                <TextView
+                    android:id="@+id/batchView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/batch"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="21dp"
+                    tools:layout_editor_absoluteY="195dp" />
+
+
+                <Spinner
+                    android:id="@+id/batchSpinner"
+                    android:layout_width="331dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    tools:layout_editor_absoluteX="18dp"
+                    tools:layout_editor_absoluteY="226dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btngpa"
+                        android:layout_width="105dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="@color/theme_blue"
+                        android:text="@string/gpa"
+                        android:textColor="@color/white"
+                        tools:layout_editor_absoluteX="256dp"
+                        tools:layout_editor_absoluteY="281dp" />
+
+                    <Button
+                        android:id="@+id/btncgpa"
+                        android:layout_width="105dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="@color/theme_blue"
+                        android:text="@string/cgpa"
+                        android:textColor="@color/white"
+                        tools:layout_editor_absoluteX="256dp"
+                        tools:layout_editor_absoluteY="281dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
