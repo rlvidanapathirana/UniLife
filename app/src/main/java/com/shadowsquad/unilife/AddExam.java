@@ -7,6 +7,7 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -56,25 +57,47 @@ public class AddExam extends AppCompatActivity {
         addEx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String userExamName = examName.getText().toString();
-                String userDate = date.getText().toString();
-                String userTime = time.getText().toString();
-                String userPlace = place.getText().toString();
-                String userType = type.getText().toString();
-                String userNotes = note.getText().toString();
-                long started = System.currentTimeMillis();
+                //Data validation
+                if(TextUtils.isEmpty(examName.getText())) {
+                    examName.setError("Name is Required!");
+                    examName.requestFocus();
+                } else if(TextUtils.isEmpty(date.getText())) {
+                    date.setError("Date is Required!");
+                    date.requestFocus();
+                } else if(TextUtils.isEmpty(time.getText())) {
+                    time.setError("Time is Required!");
+                    time.requestFocus();
+                } else if (TextUtils.isEmpty(place.getText())) {
+                    place.setError("Place is Required!");
+                    place.requestFocus();
+                } else if (TextUtils.isEmpty(type.getText())) {
+                    type.setError("Type is Required!");
+                    type.requestFocus();
+                } else {
 
 
-                ExamModel examModel = new ExamModel(userExamName,userDate,userTime, userPlace, userType, userNotes, started,0 );
-                dbHandler.addExam(examModel);
+                    //End of data validation prt
 
-                //Toast Message
+                    String userExamName = examName.getText().toString();
+                    String userDate = date.getText().toString();
+                    String userTime = time.getText().toString();
+                    String userPlace = place.getText().toString();
+                    String userType = type.getText().toString();
+                    String userNotes = note.getText().toString();
+                    long started = System.currentTimeMillis();
+
+
+                    ExamModel examModel = new ExamModel(userExamName, userDate, userTime, userPlace, userType, userNotes, started, 0);
+                    dbHandler.addExam(examModel);
+
+                    //Toast Message
                     String saveBtn = "Success";
                     Toast.makeText(context, saveBtn, Toast.LENGTH_SHORT).show();
 
-                //Transaction add exam act to exam frag click save btn  and Reload
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.addExamActivity,new ExamFragment()).commit();
+                    //Transaction add exam act to exam frag click save btn  and Reload
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.addExamActivity, new ExamFragment()).commit();
+                }
 
 
             }

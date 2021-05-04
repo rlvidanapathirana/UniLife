@@ -119,4 +119,60 @@ public class DbHandler extends SQLiteOpenHelper {
 
     }
 
+    //item delete in listview
+    public void deleteExamTodo(int id) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(EXAM_TABLE_NAME, ID + " =?", new String[]{String.valueOf(id)});
+        db.close();
+    }
+
+    //get a single todo
+
+    public ExamModel getsingleExamTodo(int id) {
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.query(EXAM_TABLE_NAME, new String[]{ID, EXAM_NAME , DATE, TIME , PLACE, TYPE, NOTE, FINISHED, STARTED},
+                ID + "= ?", new String[]{String.valueOf(id)},
+                null, null, null);
+        ExamModel examModel;
+        if (cursor != null) {
+            cursor.moveToFirst();
+            examModel = new ExamModel(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6),
+                    cursor.getLong(7),
+                    cursor.getLong(8)
+            );
+            return examModel;
+        }
+        return null;
+    }
+
+    //UPDATE DETAILS ADD EXAM DATABASE
+    public int updateExamTodo(ExamModel examModel) {
+
+        ContentValues contentValues = new ContentValues(); //Data struct and store in DB
+
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+
+        contentValues.put(EXAM_NAME,examModel.getExamName());
+        contentValues.put(DATE,examModel.getDate());
+        contentValues.put(TIME,examModel.getTime());
+        contentValues.put(PLACE,examModel.getPlace());
+        contentValues.put(TYPE,examModel.getType());
+        contentValues.put(NOTE,examModel.getNote());
+        contentValues.put(STARTED,examModel.getStarted());
+        contentValues.put(FINISHED,examModel.getFinished());
+        int statusEvent = sqLiteDatabase.update(EXAM_TABLE_NAME, contentValues, ID + " =?",
+                new String[]{String.valueOf(examModel.getId())}); //kochchra raw premanayk upddate unda blnda int eka danwa
+        //Log.i("DBH", "DATA SAVED! ==> Status Event : " + statusEvent);
+
+        sqLiteDatabase.close();
+        return statusEvent;
+
+    }
 }
