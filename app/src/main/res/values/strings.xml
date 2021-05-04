@@ -25,4 +25,8 @@
     <string name="save">Save</string>
     <string name="delete">Delete</string>
     <string name="datecrtpage" />
+    <string name="editEventTopic">Edit event</string>
+    <string name="saveupdate1">Update</string>
+    <string name="EditEventtopic">Edit event</string>
+    <string name="updatebtn">Update</string>
 </resources>

@@ -1,41 +1,38 @@
 package com.shadowsquad.unilife;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EdgeEffect;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
-import java.io.Serializable;
 import java.util.Calendar;
 
-public class createEvent extends AppCompatActivity {
+public class edit_event extends AppCompatActivity {
 
-    private EditText eventName,presenter,venue,note;
-    private Button sbtn,endTime,statTime;
     private DbHandler dbHandler;
     private Context context;
-    ImageButton btn1;
+    private Long updatedate;
+    private EditText  eventName,presenter,venue,note;
+    private  ImageButton btn1;
+
+    private Button savedata;
+    String eventId;
 
     //date piker
     DatePickerDialog.OnDateSetListener dateSetListener;
-    private Button date;
+    private Button  statTime,endTime;
+    private Button  date;
 
     //time piker
     TimePickerDialog.OnTimeSetListener timeSetListener1;
@@ -46,88 +43,79 @@ public class createEvent extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_event);
-
-
-        eventName = findViewById(R.id.editTextTextPersonName);
-        presenter = findViewById(R.id.presenternametxt );
-        venue = findViewById(R.id.venutxt );
-        statTime = findViewById(R.id.editTextTime2 );
-        endTime = findViewById(R.id.editTextTime );
-        date = findViewById(R.id.datetxt );
-        note = findViewById(R.id.noteTextMultiLine );
-        sbtn = findViewById(R.id.savebtn );
-
+        setContentView(R.layout.activity_edit_event);
         context =this;
         dbHandler =new DbHandler(context);
 
-        //back button
+        eventName = findViewById(R.id.updateEname);
+        presenter = findViewById(R.id.updatePresentername);
+        venue = findViewById(R.id.updateVenue);
+        statTime = findViewById(R.id.updateStarttime);
+        endTime = findViewById(R.id.updateEndtime);
+        date = findViewById(R.id.updateDate);
+        note = findViewById(R.id.updateNote);
+        savedata = findViewById(R.id.updatebtn);
 
-        btn1 = (ImageButton) findViewById(R.id.backarrow);
+        btn1 = (ImageButton) findViewById(R.id.btnback);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//                fragmentTransaction.replace(R.id.fragment_container, new EventFragment()).commit();
-                createEvent.super.onBackPressed();
+                //fragmentTransaction.replace(R.id.fragment_container, new EventFragment()).commit();
+                //createEvent.super.onBackPressed();
+                edit_event.super.onBackPressed();
             }
         });
 
 
-        //back button
-//        ImageButton btn = (ImageButton) findViewById(R.id.backarrow);
-//
-//        btn.setOnClickListener(new View.OnClickListener(){
-//            public void onClick(View v){
-//                startActivity(new Intent( createEvent.this,EventFragment.class));
-//            }
-//        });
+        final String id =getIntent().getStringExtra("id");
+        EventModle eventModle =  dbHandler.getsingleTodo(Integer.parseInt(id)); //id eka string krgnnwa
 
-        sbtn.setOnClickListener(new View.OnClickListener() {
+//        Log.i("DBH", "EventName => ");
+
+         eventName.setText(eventModle.getEventName());
+         presenter.setText(eventModle.getPresenter());
+         venue.setText(eventModle.getVenue());
+         statTime.setText(eventModle.getStatTime());
+         endTime.setText(eventModle.getEndTime());
+         date.setText(eventModle.getDate());
+         note.setText(eventModle.getNote());
+
+         //update button
+        savedata.setOnClickListener(new View.OnClickListener() {
+            //private EventFragment  eventFragment;
+
             @Override
             public void onClick(View v) {
-                String userEentname = eventName.getText().toString();
-                String userPresenter =presenter.getText().toString();
-                String userVenue = venue.getText().toString();
-                String userStarttimer =statTime.getText().toString();
-                String userEndtime = endTime.getText().toString();
-                String userDate =date.getText().toString();
-                String userNote = note.getText().toString();
-                long started = System.currentTimeMillis();
 
-                //Data validation
-                if(TextUtils.isEmpty(eventName.getText())) {
-                    eventName.setError("Name is Required!");
-                    eventName.requestFocus();
-                    return;
-                }
-                 if(TextUtils.isEmpty(statTime.getText())) {
-                    statTime.setError("Start time is Required!");
-                    statTime.requestFocus();
-                    return;
-                }
-                  if(TextUtils.isEmpty(date.getText())) {
-                    date.setError("Date  is Required!");
-                    date.requestFocus();
-                    return;
-                }
 
-                EventModle eventModle = new EventModle(userEentname,userPresenter,userVenue,userStarttimer,userEndtime,userDate,userNote,started,0);
-                dbHandler.addCreateEvent(eventModle);
+                int eventId = eventModle.getId();
+                String eventNameText = eventName.getText().toString();
+                String presenterText = presenter.getText().toString();
+                String venueText = venue.getText().toString();
+                String statTimeText = statTime.getText().toString();
+                String endTimeText = endTime.getText().toString();
+                String dateText = date.getText().toString();
+                String noteText = note.getText().toString();
 
-                String from = ("successfully save inserted details");
-                Toast.makeText(context, from, Toast.LENGTH_SHORT).show();
+                updatedate = System.currentTimeMillis();
+                //danata tyena sytem eke welawa gnnwa
 
-                //after click the save button gose to fragment
+                EventModle eventModle1 = new EventModle(eventId, eventNameText, presenterText, venueText, statTimeText, endTimeText,dateText, noteText, updatedate, 0);
+                int state = dbHandler.updateEventTodo(eventModle1);
+//                int state = dbHandler.updateEventTodo(new EventModle());
 
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.createpage,new EventFragment()).commit();
+
+                 //activity to fragment
+//                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//                fragmentTransaction.replace(R.id.fragment1, new EventFragment()).commit();
+                startActivity(new Intent(context,MainActivity.class));
+
 
 
             }
         });
 
-        //date picker
+                //date picker
 
 
                 date.setOnClickListener(new View.OnClickListener() {
@@ -147,12 +135,14 @@ public class createEvent extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                         month = month + 1;
-                       // Log.d(TAG, "onDateSet: dd/mm/yyyy" + day + "/" + month + "/" + year);
+                        // Log.d(TAG, "onDateSet: dd/mm/yyyy" + day + "/" + month + "/" + year);
 
                         String dateview = day + "/" + month + "/" + year;
                         date.setText(dateview);
                     }
                 };
+            
+
 
         //time piker for star time
 
@@ -213,7 +203,4 @@ public class createEvent extends AppCompatActivity {
 
     }
 
-
-
 }
-
