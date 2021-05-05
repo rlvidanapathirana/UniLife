@@ -62,7 +62,7 @@
 
         <LinearLayout
             android:layout_width="369dp"
-            android:layout_height="335dp"
+            android:layout_height="300dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded"
@@ -73,29 +73,8 @@
 
             <LinearLayout
                 android:layout_width="369dp"
-                android:layout_height="335dp"
+                android:layout_height="300dp"
                 android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/facultyView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:text="@string/faculty"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    tools:layout_editor_absoluteX="21dp"
-                    tools:layout_editor_absoluteY="30dp" />
-
-                <Spinner
-                    android:id="@+id/facultySpinner"
-                    android:layout_width="328dp"
-                    android:layout_height="36dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="5dp"
-                    tools:layout_editor_absoluteX="21dp"
-                    tools:layout_editor_absoluteY="59dp" />
 
                 <TextView
                     android:id="@+id/specializeView"
@@ -143,7 +122,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="50dp"
                     android:orientation="horizontal">
 
                     <Button

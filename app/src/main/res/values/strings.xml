@@ -23,4 +23,27 @@
     <string name="batch">Batch</string>
     <string name="gpa">GPA</string>
     <string name="cgpa">CGPA</string>
+
+    <string-array name="special">
+        <item>Data Science</item>
+        <item>Software Engineering</item>
+        <item>Information Technology</item>
+        <item>Interactive Media</item>
+        <item>Networking</item>
+        <item>Information System</item>
+        <item>Cyber Security</item>
+    </string-array>
+
+    <string-array name="batchArr">
+        <item>Y1S1</item>
+        <item>Y1S2</item>
+        <item>Y2S1</item>
+        <item>Y2S2</item>
+        <item>Y3S1</item>
+        <item>Y3S2</item>
+        <item>Y4S1</item>
+        <item>Y4S2</item>
+    </string-array>
+
+
 </resources>

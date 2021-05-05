@@ -9,16 +9,15 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link calcSelect#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class calcSelect extends Fragment {
+public class calcSelect extends Fragment implements AdapterView.OnItemSelectedListener {
 
     Button gpaCal, cgpaCal;
+    Spinner spnFaculty, spnSpecial, spnBatch;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,6 +27,22 @@ public class calcSelect extends Fragment {
 
         gpaCal = (Button) view.findViewById(R.id.btngpa);
         cgpaCal = (Button) view.findViewById(R.id.btncgpa);
+        spnSpecial = view.findViewById(R.id.specializeSpinner);
+        spnBatch = view.findViewById(R.id.batchSpinner);
+
+        // Spinners
+        ArrayAdapter spacialAdapter = ArrayAdapter.createFromResource( getContext(), R.array.special, R.layout.custom_spinner_light); //change this to design selected
+        spacialAdapter.setDropDownViewResource(R.layout.custom_spinner_light_drop); //change this layout for design dropdown
+        spnSpecial.setAdapter(spacialAdapter);
+        spnSpecial.setOnItemSelectedListener(this);
+        spnSpecial.getSelectedItem();
+
+        ArrayAdapter batchAdapter = ArrayAdapter.createFromResource( getContext(), R.array.batchArr, R.layout.custom_spinner_light);
+        batchAdapter.setDropDownViewResource(R.layout.custom_spinner_light_drop);
+        spnBatch.setAdapter(batchAdapter);
+        spnBatch.setOnItemSelectedListener(this);
+        spnBatch.getSelectedItem(); //This should assigned to a variable and return
+
         gpaCal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(android.view.View v) {
@@ -53,5 +68,15 @@ public class calcSelect extends Fragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
