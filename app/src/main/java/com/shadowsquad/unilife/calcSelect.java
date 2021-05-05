@@ -49,7 +49,7 @@ public class calcSelect extends Fragment implements AdapterView.OnItemSelectedLi
                 gpaCalc gpacalc = new gpaCalc();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.linearLayout1,gpacalc);
+                fragmentTransaction.replace(R.id.frameLayout,gpacalc);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
@@ -61,7 +61,7 @@ public class calcSelect extends Fragment implements AdapterView.OnItemSelectedLi
                 cgpaCalc cgpacalc = new cgpaCalc();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.linearLayout1,cgpacalc);
+                fragmentTransaction.replace(R.id.frameLayout,cgpacalc);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
