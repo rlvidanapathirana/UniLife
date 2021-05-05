@@ -1,6 +1,7 @@
 package com.shadowsquad.unilife;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -75,6 +77,16 @@ public class EditExam extends AppCompatActivity {
                 ExamModel examModel = new ExamModel(Integer.parseInt(id), examNameText, dateText, timeText, placeText, typeText, noteText, updatedate, 0);
 
                 int state = dbHandler.updateExamTodo(examModel);
+
+            //UPDATE SUCCESS Toast message and auto back to exam frag
+                String from = (" successfully updated  ");
+                Toast.makeText(context, from, Toast.LENGTH_LONG).show();
+                // startActivity(new Intent(context,MainActivity.class));
+                //activity to fragment
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.editExamPage,new ExamFragment()).commit();
+
+
             }
         });
                 // Date
