@@ -5,59 +5,16 @@
     android:id="@+id/fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/theme_white">
+    android:background="@color/theme_blue">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:background="@color/theme_blue"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/examss"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/examText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/exams"
-            android:textColor="@color/white"
-            android:textSize="36sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="175dp"
-            android:layout_height="89dp"
-            android:layout_marginTop="44dp"
-            android:contentDescription="@string/examHedderLogo"
-            app:layout_constraintBottom_toTopOf="@+id/examText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.542"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/examhedder" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageButton
-        android:id="@+id/BtnOpenExam"
-        android:layout_width="67dp"
-        android:layout_height="58dp"
-        android:background="@color/theme_white"
-        android:contentDescription="@string/add"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.926"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="0.911"
-        app:srcCompat="@drawable/add"
-        tools:srcCompat="@drawable/add" />
+        tools:layout_editor_absoluteY="284dp"></TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
