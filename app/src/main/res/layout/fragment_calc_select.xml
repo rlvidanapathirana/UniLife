@@ -52,6 +52,7 @@
         android:layout_width="411dp"
         android:layout_height="579dp"
         android:orientation="vertical"
+        android:paddingTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -13,9 +13,48 @@
         android:layout_height="153dp"
         android:background="@color/theme_blue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/addImgBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:background="@color/theme_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/add_btn_img" />
+
+        <TextView
+            android:id="@+id/textViewCgpa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="61dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTarget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCgpa" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -24,23 +63,22 @@
         android:layout_width="158dp"
         android:layout_height="150dp"
         android:background="@drawable/rounded"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.316"></androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCalc"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1"></androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout2"
         android:layout_width="349dp"
         android:layout_height="102dp"
         android:background="@drawable/rounded"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1"
-        app:layout_constraintVertical_bias="0.426">
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -49,11 +87,11 @@
         android:layout_width="349dp"
         android:layout_height="102dp"
         android:background="@drawable/rounded"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1"
-        app:layout_constraintVertical_bias="0.678">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -64,9 +102,9 @@
         android:background="@drawable/rounded"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1"
-        app:layout_constraintVertical_bias="0.928"></androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"></androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/btnCalc"
@@ -74,11 +112,10 @@
         android:layout_height="150dp"
         android:background="@drawable/rounded"
         android:text="@string/gpaCalc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/frameLayout"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.316" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
