@@ -3,6 +3,7 @@ package com.shadowsquad.unilife;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -24,6 +26,7 @@ public class AddExam extends AppCompatActivity {
     private Button addEx, date, time, clear;
     private DbHandler dbHandler;
     private Context context;
+    private ImageButton backAddExambtn;
 
 
     //    DatePicker --------------
@@ -33,6 +36,7 @@ public class AddExam extends AppCompatActivity {
     TimePickerDialog.OnTimeSetListener timeSetListener;
 
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +54,15 @@ public class AddExam extends AppCompatActivity {
 
         context = this;
         dbHandler = new DbHandler(context);
+
+        //Back img btn
+        backAddExambtn = (ImageButton) findViewById(R.id.backArrowAddExam);
+        backAddExambtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddExam.super.onBackPressed();
+            }
+        });
 
 
         //Clear Button

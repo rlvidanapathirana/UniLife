@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ public class EditExam extends AppCompatActivity {
     private EditText examName,  place, type, note ;
     private DbHandler dbHandler;
     private Long updatedate;
+    private ImageButton backUpdateExambtn;
 
     //    DatePicker --------------
     DatePickerDialog.OnDateSetListener dateSetListener;
@@ -45,6 +47,16 @@ public class EditExam extends AppCompatActivity {
 
         context = this;
         dbHandler = new DbHandler(context);
+
+
+        //Back img btn
+        backUpdateExambtn = (ImageButton) findViewById(R.id.backArrowEditExam);
+        backUpdateExambtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditExam.super.onBackPressed();
+            }
+        });
 //
         final String id =getIntent().getStringExtra("id");
         ExamModel examModel =  dbHandler.getsingleExamTodo(Integer.parseInt(id)); //id eka string krgnnwa

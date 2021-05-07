@@ -114,7 +114,7 @@ public class ExamFragment extends Fragment {
 
                 });
 
-                builder.setNeutralButton("View or Update", new DialogInterface.OnClickListener() {
+                builder.setNeutralButton("View&Edit", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
