@@ -21,7 +21,7 @@ import java.util.Calendar;
 public class AddExam extends AppCompatActivity {
 
     private EditText examName,  place, type, note ;
-    private Button addEx, date, time;
+    private Button addEx, date, time, clear;
     private DbHandler dbHandler;
     private Context context;
 
@@ -52,6 +52,19 @@ public class AddExam extends AppCompatActivity {
         dbHandler = new DbHandler(context);
 
 
+        //Clear Button
+        clear = findViewById(R.id.btnClearExamSave);
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                      examName.getText().clear();
+//                    date.getText().clear();
+//                    time.getText().clear();
+                      place.getText().clear();
+                      type.getText().clear();
+                      note.getText().clear();
+            }
+        });
 
 
         addEx.setOnClickListener(new View.OnClickListener() {

@@ -9,8 +9,7 @@ public class ExamModel {
 
 
     public ExamModel(){
-
-
+        
 
 
     }
