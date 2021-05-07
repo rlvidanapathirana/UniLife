@@ -123,7 +123,7 @@ public class DbHandler extends SQLiteOpenHelper {
 
 
 
-   // get a single todo
+    // get a single todo
     public EventModle getsingleTodo(int id) {
         SQLiteDatabase db = getWritableDatabase();
         Cursor cursor = db.query(EVENT_TABLE_NAME, new String[]{ID, EVENT_NAME, PRESENTER, VENUE, START_TIME, END_TIME, DATE, NOTE, FINISHED, STARTED},
@@ -173,7 +173,7 @@ public class DbHandler extends SQLiteOpenHelper {
 
         int statusEvent = sqLiteDatabase.update(EVENT_TABLE_NAME, contentValues, ID +"  =?", new String[]{String.valueOf(eventModle.getId())});
 
-      //  Log.i("ABC",String.valueOf(eventModle.getId() + " " ));
+        //  Log.i("ABC",String.valueOf(eventModle.getId() + " " ));
 
 
         sqLiteDatabase.close();
@@ -191,4 +191,3 @@ public class DbHandler extends SQLiteOpenHelper {
 
     }
 }
-
