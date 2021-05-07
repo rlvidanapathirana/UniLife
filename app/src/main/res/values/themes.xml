@@ -9,6 +9,8 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
+
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
@@ -20,7 +22,7 @@
         <!-- Background Color-->
         <item name="android:background">@color/shadow_gray</item>
         <!-- Text Color for title and message -->
-        <item name="colorOnSurface">@color/black</item>
+        <item name="colorOnSurface">@color/white</item>
         <!-- Style for positive button -->
         <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
 <!--        &lt;!&ndash; Style for negative button &ndash;&gt;-->

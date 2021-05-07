@@ -8,6 +8,7 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -44,6 +46,8 @@ public class edit_event extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_event);
+
+
         context =this;
         dbHandler =new DbHandler(context);
 
@@ -56,12 +60,11 @@ public class edit_event extends AppCompatActivity {
         note = findViewById(R.id.updateNote);
         savedata = findViewById(R.id.updatebtn);
 
+        //back button
         btn1 = (ImageButton) findViewById(R.id.btnback);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //fragmentTransaction.replace(R.id.fragment_container, new EventFragment()).commit();
-                //createEvent.super.onBackPressed();
                 edit_event.super.onBackPressed();
             }
         });
@@ -100,15 +103,42 @@ public class edit_event extends AppCompatActivity {
                 updatedate = System.currentTimeMillis();
                 //danata tyena sytem eke welawa gnnwa
 
+                //Data validation
+                if(TextUtils.isEmpty(eventName.getText())) {
+                    eventName.setError("Name is Required!");
+                    eventName.requestFocus();
+                    return;
+                }
+                if(TextUtils.isEmpty(statTime.getText())) {
+                    statTime.setError("Start time is Required!");
+                    statTime.requestFocus();
+                    return;
+                }
+                if(TextUtils.isEmpty(date.getText())) {
+                    date.setError("Date  is Required!");
+                    date.requestFocus();
+                    return;
+                }
+
+
+
                 EventModle eventModle1 = new EventModle(eventId, eventNameText, presenterText, venueText, statTimeText, endTimeText,dateText, noteText, updatedate, 0);
                 int state = dbHandler.updateEventTodo(eventModle1);
 //                int state = dbHandler.updateEventTodo(new EventModle());
 
+                String from = (" successfully updated  ");
+                Toast.makeText(context, from, Toast.LENGTH_LONG).show();
+
+                // startActivity(new Intent(context,MainActivity.class));
 
                  //activity to fragment
-//                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//                fragmentTransaction.replace(R.id.fragment1, new EventFragment()).commit();
-                startActivity(new Intent(context,MainActivity.class));
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.editieventpage,new EventFragment()).commit();
+
+
+
+
+
 
 
 

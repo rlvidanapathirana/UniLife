@@ -330,16 +330,32 @@
             android:orientation="horizontal">
 
             <Button
+
+                android:id="@+id/eventclear"
+                android:layout_width="97dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/Cleareventbtn"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/shadow_gray"
+                app:layout_constraintBaseline_toBaselineOf="@+id/deletebtn"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <Button
                 android:id="@+id/savebtn"
                 android:layout_width="97dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="220dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/save"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/theme_blue"
                 app:layout_constraintBaseline_toBaselineOf="@+id/deletebtn"
                 app:layout_constraintEnd_toEndOf="parent" />
+
+
 
         </LinearLayout>
     </LinearLayout>

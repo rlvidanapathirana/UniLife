@@ -45,37 +45,37 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/eventhome" />
 
-        <ImageButton
-            android:id="@+id/imageMenu"
-            android:layout_width="38dp"
-            android:layout_height="27dp"
-            android:background="@color/theme_blue"
-            android:contentDescription="@string/menu"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/eventhome"
-            app:layout_constraintHorizontal_bias="0.294"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.203"
-            app:srcCompat="@drawable/menu"
-            tools:srcCompat="@drawable/menu" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/imageMenu"-->
+<!--            android:layout_width="38dp"-->
+<!--            android:layout_height="27dp"-->
+<!--            android:background="@color/theme_blue"-->
+<!--            android:contentDescription="@string/menu"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/eventhome"-->
+<!--            app:layout_constraintHorizontal_bias="0.294"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.203"-->
+<!--            app:srcCompat="@drawable/menu"-->
+<!--            tools:srcCompat="@drawable/menu" />-->
 
-        <ImageButton
-            android:id="@+id/imageSelect"
-            android:layout_width="37dp"
-            android:layout_height="35dp"
-            android:background="@color/theme_blue"
-            android:contentDescription="@string/select"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.666"
-            app:layout_constraintStart_toEndOf="@+id/createEventTopic"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.821"
-            app:srcCompat="@drawable/select"
-            tools:srcCompat="@drawable/select" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/imageSelect"-->
+<!--            android:layout_width="37dp"-->
+<!--            android:layout_height="35dp"-->
+<!--            android:background="@color/theme_blue"-->
+<!--            android:contentDescription="@string/select"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.666"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/createEventTopic"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.821"-->
+<!--            app:srcCompat="@drawable/select"-->
+<!--            tools:srcCompat="@drawable/select" />-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

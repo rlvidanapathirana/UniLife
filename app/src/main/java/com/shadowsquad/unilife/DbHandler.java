@@ -12,6 +12,9 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.icu.text.MessagePattern.ArgType.SELECT;
+import static java.time.LocalDateTime.MIN;
+
 public class DbHandler extends SQLiteOpenHelper {
     private static final int VERSION = 1;
     private static final String DB_NAME = "unilife";
@@ -115,16 +118,12 @@ public class DbHandler extends SQLiteOpenHelper {
 
     }
 
-    //item delete in listview
 
-    public void deleteEventTodo(int id) {
-        SQLiteDatabase db = getWritableDatabase();
-        db.delete(EVENT_TABLE_NAME, ID + " =?", new String[]{String.valueOf(id)});
-        db.close();
 
-    }
 
-    //get a single todo
+
+
+   // get a single todo
     public EventModle getsingleTodo(int id) {
         SQLiteDatabase db = getWritableDatabase();
         Cursor cursor = db.query(EVENT_TABLE_NAME, new String[]{ID, EVENT_NAME, PRESENTER, VENUE, START_TIME, END_TIME, DATE, NOTE, FINISHED, STARTED},
@@ -174,21 +173,21 @@ public class DbHandler extends SQLiteOpenHelper {
 
         int statusEvent = sqLiteDatabase.update(EVENT_TABLE_NAME, contentValues, ID +"  =?", new String[]{String.valueOf(eventModle.getId())});
 
-        Log.i("ABC",String.valueOf(eventModle.getId() + " " ));
-
-        if(statusEvent>0) {
-            System.out.println("Successfully Updated");
-        }
-        else{
-            System.out.println("faild Updated");
-
-        }
-
+      //  Log.i("ABC",String.valueOf(eventModle.getId() + " " ));
 
 
         sqLiteDatabase.close();
         return statusEvent;
 
+
+    }
+
+    //item delete in listview
+
+    public void deleteEventTodo(int id) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(EVENT_TABLE_NAME, ID + " =?", new String[]{String.valueOf(id)});
+        db.close();
 
     }
 }

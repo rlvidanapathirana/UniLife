@@ -9,16 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Unilife">
-        <activity android:name=".edit_event"></activity>
-        <activity android:name=".Update_Event1" />
-        <activity android:name=".update_event" />
-        <activity android:name=".todoevent" />
-        <activity android:name=".createEvent" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".lounchhome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".edit_event" />
+<!--        <activity android:name=".Update_Event1" />-->
+<!--        <activity android:name=".update_event" />-->
+        <activity android:name=".todoevent" />
+        <activity android:name=".createEvent" />
+
+
+
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>

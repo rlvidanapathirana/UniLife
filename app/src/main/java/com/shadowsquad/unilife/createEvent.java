@@ -1,11 +1,14 @@
 package com.shadowsquad.unilife;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.DatePickerDialog;
+import android.app.NotificationManager;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -28,10 +31,10 @@ import java.util.Calendar;
 public class createEvent extends AppCompatActivity {
 
     private EditText eventName,presenter,venue,note;
-    private Button sbtn,endTime,statTime;
+    private Button sbtn,endTime,statTime,clear;
     private DbHandler dbHandler;
     private Context context;
-    ImageButton btn1;
+    private ImageButton btn1;
 
     //date piker
     DatePickerDialog.OnDateSetListener dateSetListener;
@@ -67,21 +70,24 @@ public class createEvent extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//                fragmentTransaction.replace(R.id.fragment_container, new EventFragment()).commit();
                 createEvent.super.onBackPressed();
             }
         });
 
+        //clear button
+        clear = findViewById(R.id.eventclear);
 
-        //back button
-//        ImageButton btn = (ImageButton) findViewById(R.id.backarrow);
-//
-//        btn.setOnClickListener(new View.OnClickListener(){
-//            public void onClick(View v){
-//                startActivity(new Intent( createEvent.this,EventFragment.class));
-//            }
-//        });
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                eventName.getText().clear();
+                presenter.getText().clear();
+                venue.getText().clear();
+                note.getText().clear();
+
+
+            }
+        });
 
         sbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +100,8 @@ public class createEvent extends AppCompatActivity {
                 String userDate =date.getText().toString();
                 String userNote = note.getText().toString();
                 long started = System.currentTimeMillis();
+
+
 
                 //Data validation
                 if(TextUtils.isEmpty(eventName.getText())) {
@@ -112,16 +120,35 @@ public class createEvent extends AppCompatActivity {
                     return;
                 }
 
+
+                //notification
+
+//                NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(),"my nofication")
+//                        .setSmallIcon(R.drawable.ic_notificatin_mail)
+//                        .setContentTitle( "Notification")
+//                        .setContentText(" successfully save details")
+//                        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+//                        .setAutoCancel(true);
+//
+//                NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(getApplicationContext());
+//                notificationManagerCompat.notify(0, builder.build());
+
+
                 EventModle eventModle = new EventModle(userEentname,userPresenter,userVenue,userStarttimer,userEndtime,userDate,userNote,started,0);
                 dbHandler.addCreateEvent(eventModle);
 
-                String from = ("successfully save inserted details");
+                String from = ("successfully saved details");
                 Toast.makeText(context, from, Toast.LENGTH_SHORT).show();
 
                 //after click the save button gose to fragment
 
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.createpage,new EventFragment()).commit();
+
+
+//                NotificationManager notificationManager =(NotificationManager)
+//                getSystemService(NOTIFICATION_SERVICE);
+//                notificationManager.notify(0,builder.build());
 
 
             }
