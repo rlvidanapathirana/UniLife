@@ -76,7 +76,7 @@ public class AddLecture extends AppCompatActivity {
         context = this;
 
         dbHandler = new DbHandler(context);
-
+//save Button
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,18 +119,22 @@ public class AddLecture extends AppCompatActivity {
                 Lecture lecture = new Lecture(userName,userDate,userTime,userPlace,userConductedBy,userSpecialNote,started,0);
                 dbHandler.addLecture(lecture);
 
+
+                String from = ("Details saved successfully");
+                Toast.makeText(context, from, Toast.LENGTH_SHORT).show();
+
                 //After click, Navigate to the main fragment
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.addLectureActivity,new LectureFragment()).commit();
 
 
-                //showing toast msg
-                if(TextUtils.isEmpty(name.getText().toString())) {
-                    Toast.makeText(AddLecture.this, "No empty fields are allowed", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    Toast.makeText(AddLecture.this,name.getText().toString(),Toast.LENGTH_SHORT).show();
-                }
+//                //showing toast msg
+//                if(TextUtils.isEmpty(name.getText().toString())) {
+//                    Toast.makeText(AddLecture.this, "No empty fields are allowed", Toast.LENGTH_SHORT).show();
+//                }
+//                else{
+//                    Toast.makeText(AddLecture.this,name.getText().toString(),Toast.LENGTH_SHORT).show();
+//                }
 
 
 
