@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -18,7 +19,7 @@ import java.text.DecimalFormat;
 
 public class HomeFragment extends Fragment {
 
-    Button btnCal;
+    ConstraintLayout btnCal;
     ImageButton addBtn;
     TextView txtCgpa, txtTarget, txtNeeded;
 
@@ -35,14 +36,14 @@ public class HomeFragment extends Fragment {
         txtCgpa = (TextView) view.findViewById(R.id.textViewCgpa);
         txtTarget = (TextView) view.findViewById(R.id.textViewTarget);
         txtNeeded = (TextView) view.findViewById(R.id.textLine);
-        btnCal = (Button) view.findViewById(R.id.btnCalc);
+        btnCal = (ConstraintLayout) view.findViewById(R.id.btnCalc);
         addBtn = (ImageButton) view.findViewById(R.id.addImgBtn);
 
 
         dbHandler = new DbHandler(getActivity().getApplicationContext());
         boolean insert = dbHandler.insertgpa(1,"0","0");
 
-        gpamodel = dbHandler.getSingleTodo(1);
+        gpamodel = dbHandler.getSingle(1);
 
         txtCgpa.setText("CGPA = " + gpamodel.getCgpa());
         txtTarget.setText("Target CGPA = " + gpamodel.getTarget());

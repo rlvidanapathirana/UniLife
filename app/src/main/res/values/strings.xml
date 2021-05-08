@@ -23,14 +23,24 @@
     <string name="batch">Batch</string>
     <string name="gpa">GPA</string>
     <string name="cgpa">CGPA</string>
+    <string name="target">Target CGPA</string>
+    <string name="university">University</string>
+
+    <string-array name="university">
+        <item>SLIIT</item>
+    </string-array>
+
+    <string-array name="facultyArr">
+        <item>Faculty of Computing</item>
+    </string-array>
 
     <string-array name="special">
         <item>Data Science</item>
         <item>Software Engineering</item>
         <item>Information Technology</item>
         <item>Interactive Media</item>
-        <item>Networking</item>
-        <item>Information System</item>
+        <item>Computer Systems and Network Engineering</item>
+        <item>Information Systems Engineering</item>
         <item>Cyber Security</item>
     </string-array>
 

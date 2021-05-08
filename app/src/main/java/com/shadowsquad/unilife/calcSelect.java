@@ -17,7 +17,7 @@ import android.widget.Spinner;
 public class calcSelect extends Fragment implements AdapterView.OnItemSelectedListener {
 
     Button gpaCal, cgpaCal;
-    Spinner spnFaculty, spnSpecial, spnBatch;
+    Spinner spnUniversity, spnFaculty, spnSpecial, spnBatch;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,10 +27,24 @@ public class calcSelect extends Fragment implements AdapterView.OnItemSelectedLi
 
         gpaCal = (Button) view.findViewById(R.id.btngpa);
         cgpaCal = (Button) view.findViewById(R.id.btncgpa);
+        spnUniversity = view.findViewById(R.id.universitySpinner);
+        spnFaculty = view.findViewById(R.id.facultySpinner);
         spnSpecial = view.findViewById(R.id.specializeSpinner);
         spnBatch = view.findViewById(R.id.batchSpinner);
 
         // Spinners
+        ArrayAdapter universityAdapter = ArrayAdapter.createFromResource( getContext(), R.array.university, R.layout.custom_spinner_light); //change this to design selected
+        universityAdapter.setDropDownViewResource(R.layout.custom_spinner_light_drop);
+        spnUniversity.setAdapter(universityAdapter);
+        spnUniversity.setOnItemSelectedListener(this);
+        spnUniversity.getSelectedItem();
+
+        ArrayAdapter facultyAdapter = ArrayAdapter.createFromResource( getContext(), R.array.facultyArr, R.layout.custom_spinner_light); //change this to design selected
+        facultyAdapter.setDropDownViewResource(R.layout.custom_spinner_light_drop);
+        spnFaculty.setAdapter(facultyAdapter);
+        spnFaculty.setOnItemSelectedListener(this);
+        spnFaculty.getSelectedItem();
+
         ArrayAdapter spacialAdapter = ArrayAdapter.createFromResource( getContext(), R.array.special, R.layout.custom_spinner_light); //change this to design selected
         spacialAdapter.setDropDownViewResource(R.layout.custom_spinner_light_drop); //change this layout for design dropdown
         spnSpecial.setAdapter(spacialAdapter);
@@ -49,7 +63,7 @@ public class calcSelect extends Fragment implements AdapterView.OnItemSelectedLi
                 gpaCalc gpacalc = new gpaCalc();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout,gpacalc);
+                fragmentTransaction.replace(R.id.gpaReminder,gpacalc);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
@@ -61,7 +75,7 @@ public class calcSelect extends Fragment implements AdapterView.OnItemSelectedLi
                 cgpaCalc cgpacalc = new cgpaCalc();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout,cgpacalc);
+                fragmentTransaction.replace(R.id.gpaReminder,cgpacalc);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

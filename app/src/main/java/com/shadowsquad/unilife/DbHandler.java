@@ -59,7 +59,7 @@ public class DbHandler extends SQLiteOpenHelper {
             }
         }
 
-        public gpaModel getSingleTodo(int id) {
+        public gpaModel getSingle(int id) {
             SQLiteDatabase db = getWritableDatabase();
             Cursor cursor = db.query(GPA_TABLE_NAME, new String[]{ID, CGPA, TARGET},
                     ID + "= ?", new String[]{String.valueOf(id)},

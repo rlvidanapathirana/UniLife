@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,7 +40,7 @@ public class PopupBox extends AppCompatDialogFragment {
         edtCgpa = view.findViewById(R.id.edit_cgpa);
         edtTarget = view.findViewById(R.id.edit_target);
 
-        gpaModel gpamodel = dbHandler.getSingleTodo(1);
+        gpaModel gpamodel = dbHandler.getSingle(1);
 
         edtCgpa.setText(gpamodel.getCgpa());
         edtTarget.setText(gpamodel.getTarget());
@@ -51,6 +52,19 @@ public class PopupBox extends AppCompatDialogFragment {
 
                         String cgpa = edtCgpa.getText().toString();
                         String target = edtTarget.getText().toString();
+
+                        if(TextUtils.isEmpty(edtTarget.getText())) {
+                            edtTarget.setError("");
+                            edtTarget.requestFocus();
+                            return;
+                        }
+
+                        if(TextUtils.isEmpty(edtCgpa.getText())) {
+                            edtCgpa.setError("");
+                            edtCgpa.requestFocus();
+                            return;
+                        }
+
                         gpaModel gpam = new gpaModel(cgpa, target);
                         int ret = dbHandler.updateCgpa(gpam);
 
