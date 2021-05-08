@@ -14,11 +14,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import java.text.DecimalFormat;
+
 public class HomeFragment extends Fragment {
 
     Button btnCal;
     ImageButton addBtn;
-    TextView txtCgpa, txtTarget;
+    TextView txtCgpa, txtTarget, txtNeeded;
 
     DbHandler dbHandler;
 //
@@ -32,6 +34,7 @@ public class HomeFragment extends Fragment {
 
         txtCgpa = (TextView) view.findViewById(R.id.textViewCgpa);
         txtTarget = (TextView) view.findViewById(R.id.textViewTarget);
+        txtNeeded = (TextView) view.findViewById(R.id.textLine);
         btnCal = (Button) view.findViewById(R.id.btnCalc);
         addBtn = (ImageButton) view.findViewById(R.id.addImgBtn);
 
@@ -63,12 +66,24 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        needed(Double.parseDouble(gpamodel.getTarget()) - Double.parseDouble(gpamodel.getCgpa()));
+
         return view;
     }
 
     public void openPopup() {
         PopupBox popup = new PopupBox();
         popup.show(getActivity().getSupportFragmentManager(), "example popup");
+    }
+
+    public void needed(double value) {
+        if (value > 0) {
+            DecimalFormat df = new DecimalFormat("0.00");
+            txtNeeded.setText("You need to\nincrease your\nCGPA by " + df.format(value));
+        }
+        else {
+            txtNeeded.setText("You have\nachieved\nyour target\nCGPA");
+        }
     }
 
 }

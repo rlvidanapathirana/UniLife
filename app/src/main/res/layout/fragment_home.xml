@@ -32,29 +32,39 @@
             android:id="@+id/textViewCgpa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="61dp"
             android:text="TextView"
             android:textColor="@color/white"
             android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <TextView
             android:id="@+id/textViewTarget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="9dp"
             android:text="TextView"
             android:textColor="@color/white"
             android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCgpa" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCgpa" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/undergraduate_icon" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -67,7 +77,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnCalc"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1"></androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1">
+
+        <TextView
+            android:id="@+id/textLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout2"
@@ -112,6 +137,10 @@
         android:layout_height="150dp"
         android:background="@drawable/rounded"
         android:text="@string/gpaCalc"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/shadow"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toStartOf="@+id/frameLayout"
         app:layout_constraintHorizontal_bias="0.5"
