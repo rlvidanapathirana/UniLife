@@ -118,6 +118,16 @@ public class DbHandler extends SQLiteOpenHelper {
 
     }
 
+    //counter (TABLE RAWS)
+    public  int CountEventTodo(){
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM " + EVENT_TABLE_NAME;
+
+        Cursor cursor = db.rawQuery(query,null);
+        return cursor.getCount();
+
+    }
+
 
 
 

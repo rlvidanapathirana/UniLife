@@ -101,7 +101,7 @@ public class EventFragment extends Fragment {
                         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.fragment_container,eventFragment);
-                        //fragmentTransaction.addToBackStack(null);
+                        fragmentTransaction.addToBackStack(null);
                         fragmentTransaction.commit();
 
 
@@ -118,7 +118,7 @@ public class EventFragment extends Fragment {
                         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                         fragmentTransaction.replace(R.id.fragment_container,eventFragment);
-//                        fragmentTransaction.addToBackStack(null);
+                        fragmentTransaction.addToBackStack(null);
                         fragmentTransaction.commit();
                     }
 
