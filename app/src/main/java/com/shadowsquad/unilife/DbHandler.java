@@ -29,6 +29,7 @@ public class DbHandler extends SQLiteOpenHelper {
     private static final String STARTED = "started";
     private static final String FINISHED = "finished";
 
+
     public DbHandler(@Nullable Context context) {
         super(context, DB_NAME, null, VERSION);
     }
@@ -67,8 +68,6 @@ public class DbHandler extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-
-
     // Add a single lecture
     public void addLecture(Lecture lectures) {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase(); //create an object to write the data
@@ -199,6 +198,7 @@ public class DbHandler extends SQLiteOpenHelper {
 
         Cursor cursor = db.rawQuery(query,null);
         return cursor.getCount();
+
 
     }
 }
