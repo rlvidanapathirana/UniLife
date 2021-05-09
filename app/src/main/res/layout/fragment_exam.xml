@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment1"
+    android:id="@+id/fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/theme_white">
@@ -16,9 +16,10 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+    android:background="@color/theme_blue">
 
         <TextView
-            android:id="@+id/calcText"
+            android:id="@+id/examText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/exams"
@@ -36,24 +37,13 @@
             android:layout_height="89dp"
             android:layout_marginTop="44dp"
             android:contentDescription="@string/examHedderLogo"
-            app:layout_constraintBottom_toTopOf="@+id/calcText"
+            app:layout_constraintBottom_toTopOf="@+id/examText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.542"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/examhedder" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <ListView
-        android:id="@+id/ListViewExam"
-        android:layout_width="356dp"
-        android:layout_height="423dp"
-        app:layout_constraintBottom_toTopOf="@+id/BtnOpenExam"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1" />
 
     <ImageButton
         android:id="@+id/BtnOpenExam"
@@ -66,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintVertical_bias="0.911"
         app:srcCompat="@drawable/add"
         tools:srcCompat="@drawable/add" />

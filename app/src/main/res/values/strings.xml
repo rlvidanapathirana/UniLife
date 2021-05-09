@@ -21,9 +21,9 @@
     <string name="venue">Venue</string>
     <string name="startime">Start time</string>
     <string name="endtime">End time</string>
-    
-    
-    
+
+
+
     <string name="delete">Delete</string>
     <string name="datecrtpage" />
     <string name="editEventTopic">Edit event</string>
@@ -90,4 +90,14 @@
     <string name="clear">CLEAR</string>
 
 
+    <string name="lectureHedder">Add Lecture</string>
+
+    <string name="lectureName">Lecture Name</string>
+    <string name="conductedBy">Conducted By</string>
+    <string name="specialNote">Special Note</string>
+    <string name="examss">Exam</string>
+    <string name="update"><![CDATA[Update & Save]]></string>
+    <string name="edit">"Edit "</string>
+    <string name="clear">Clear</string>
+    <string name="editLectureTopic">Edit Lecture</string>
 </resources>

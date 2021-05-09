@@ -5,17 +5,71 @@
     android:id="@+id/fragment1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_700">
+    android:background="@color/theme_white">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lecture"
-        android:textSize="24sp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@color/theme_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="284dp"></TextView>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lectureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lecture"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.548"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="175dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="44dp"
+            android:contentDescription="@string/examHedderLogo"
+            app:layout_constraintBottom_toTopOf="@+id/lectureText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/lecture_headder_foreground" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/lectureList"
+        android:layout_width="343dp"
+        android:layout_height="366dp"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+*6655#
+    <ImageButton
+        android:id="@+id/editBtnOpenLecture"
+        android:layout_width="67dp"
+        android:layout_height="58dp"
+        android:background="@color/theme_white"
+        android:contentDescription="@string/add"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.911"
+        app:srcCompat="@drawable/add"
+        tools:srcCompat="@drawable/add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

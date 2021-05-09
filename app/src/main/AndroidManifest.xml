@@ -14,6 +14,10 @@
         <activity android:name=".todoexam" />
         <activity android:name=".AddExam" />
         <activity android:name=".lounchhome">
+        <activity android:name=".EditLecture"></activity>
+        <activity android:name=".todoLecture"></activity>
+        <activity android:name=".AddLecture" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
