@@ -15,4 +15,7 @@
     <string name="note">Note</string>
     <string name="save">SAVE</string>
     <string name="type">Type</string>
+    <string name="editExamPageHedder">Edit Exam</string>
+    <string name="update">UPDATE</string>
+    <string name="clear">CLEAR</string>
 </resources>

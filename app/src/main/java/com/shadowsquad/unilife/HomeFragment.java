@@ -1,9 +1,11 @@
 package com.shadowsquad.unilife;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,9 +13,23 @@ import androidx.fragment.app.Fragment;
 
 public class HomeFragment extends Fragment {
 
+
+
+    //EXAM COUNTER
+    private TextView countEvent ;
+    private Context context;
+    private DbHandler dbHandler;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home,container,false);
+        View view =  inflater.inflate(R.layout.fragment_home,container,false);
+        countEvent = (TextView) view.findViewById(R.id.new123);
+
+        dbHandler = new DbHandler(getContext());
+        // get raw counts from table
+        int CountRaws = dbHandler.CountExamTodo();
+        countEvent.setText("you have "+CountRaws+" Event");
+
+        return view;
     }
 }
