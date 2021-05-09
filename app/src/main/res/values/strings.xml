@@ -4,6 +4,34 @@
     <string name="exam">Exam</string>
     <string name="event">Event</string>
     <string name="lecture">Lecture</string>
+
+    <string name="menu">menu</string>
+    <string name="select">select</string>
+    <string name="imageAdd">imageAdd</string>
+    <string name="eventtopic">eventtopic</string>
+    <string name="eventhome">eventhome</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Event_reminder">Event reminder</string>
+    <string name="createimg">createimg</string>
+    <string name="create_topic">Create event</string>
+    <string name="Event_name">Event name</string>
+    <string name="eventnametxt">eventnametxt</string>
+    <string name="presenrtername">Presenter</string>
+    <string name="venue">Venue</string>
+    <string name="startime">Start time</string>
+    <string name="endtime">End time</string>
+    
+    
+    
+    <string name="delete">Delete</string>
+    <string name="datecrtpage" />
+    <string name="editEventTopic">Edit event</string>
+    <string name="saveupdate1">Update</string>
+    <string name="EditEventtopic">Edit event</string>
+    <string name="updatebtn">Update</string>
+    <string name="Cleareventbtn">Clear</string>
+
     <string name="exams">Exams</string>
     <string name="add">add</string>
     <string name="examHedderLogo">examHedderLogo</string>
@@ -15,6 +43,7 @@
     <string name="note">Note</string>
     <string name="save">SAVE</string>
     <string name="type">Type</string>
+
     <string name="gpaCalc">GPA Calculator</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -54,6 +83,11 @@
         <item>Y4S1</item>
         <item>Y4S2</item>
     </string-array>
+
+
+    <string name="editExamPageHedder">Edit Exam</string>
+    <string name="update">UPDATE</string>
+    <string name="clear">CLEAR</string>
 
 
 </resources>

@@ -1,10 +1,13 @@
 package com.shadowsquad.unilife;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import android.widget.ImageButton;
+
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +21,7 @@ import java.text.DecimalFormat;
 
 public class HomeFragment extends Fragment {
 
+
     ConstraintLayout btnCal;
     ImageButton addBtn;
     TextView txtCgpa, txtTarget, txtNeeded;
@@ -26,10 +30,40 @@ public class HomeFragment extends Fragment {
 //
     gpaModel gpamodel = null;
 
+
+
+
+//    //COUNTER
+//    private TextView countEvent ;
+//    private Context context;
+//    private DbHandler dbHandler;
+
+//    @Nullable
+//    @Override
+//    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+//       return inflater.inflate(R.layout.fragment_home,container,false);
+
+//        countEvent = (TextView) view.findViewById(R.id.counterEventtext);
+//
+//
+//        dbHandler = new DbHandler(getContext());
+//
+//        // get raw counts from table
+//        int CountRaws = dbHandler.CountEventTodo();
+//        countEvent.setText("you have "+CountRaws+" Event");
+//
+
+
+    //EXAM COUNTER
+   // private TextView countEvent ;
+    //private Context context;
+    //private DbHandler dbHandler;
+
     @Nullable
     @Override
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_home,container,false);
 
         txtCgpa = (TextView) view.findViewById(R.id.textViewCgpa);
@@ -87,3 +121,16 @@ public class HomeFragment extends Fragment {
     }
 
 }
+
+        //View view =  inflater.inflate(R.layout.fragment_home,container,false);
+        //countEvent = (TextView) view.findViewById(R.id.new123);
+
+        //dbHandler = new DbHandler(getContext());
+        // get raw counts from table
+        //int CountRaws = dbHandler.CountExamTodo();
+        //countEvent.setText("you have "+CountRaws+" Event");
+
+        //return view;
+   // }
+//}
+
