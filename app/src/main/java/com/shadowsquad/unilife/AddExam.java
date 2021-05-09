@@ -70,12 +70,12 @@ public class AddExam extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                      examName.getText().clear();
+                examName.getText().clear();
 //                    date.getText().clear();
 //                    time.getText().clear();
-                      place.getText().clear();
-                      type.getText().clear();
-                      note.getText().clear();
+                place.getText().clear();
+                type.getText().clear();
+                note.getText().clear();
             }
         });
 

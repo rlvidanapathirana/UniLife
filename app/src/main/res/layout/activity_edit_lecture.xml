@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editLecturePage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_blue"
+    tools:context=".EditLecture">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addLectureHedder"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@color/theme_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="175dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/lecture_headder_foreground" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/editLectureTopic"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.538"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <ImageButton
+            android:id="@+id/backArrowImgBtn"
+            android:layout_width="43dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="19dp"
+            android:background="@color/theme_blue"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.453"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.098"
+            app:srcCompat="@drawable/arrow" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="355dp"
+        android:layout_height="491dp"
+        android:background="@color/theme_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addLectureHedder"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/lectureNameTxt"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/lectureName"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.082"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lecturedateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/updateLectureDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.092"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateLectureName" />
+
+        <TextView
+            android:id="@+id/lecturetimeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/updateLectureTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateLectureDate" />
+
+        <TextView
+            android:id="@+id/lectureplaceTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/place"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/updateLecturePlace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.068"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateLectureTime" />
+
+        <TextView
+            android:id="@+id/lectureConductuctedByTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/conductedBy"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/updateLectureConductedBy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.082"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateLecturePlace" />
+
+        <TextView
+            android:id="@+id/lectureNoteTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/specialNote"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/updateLectureSpecialNote"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateLectureConductedBy" />
+
+        <EditText
+
+            android:id="@+id/updateLectureName"
+            android:layout_width="311dp"
+            android:layout_height="31dp"
+            android:background="@drawable/txtbox"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/lecturedateTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lectureNameTxt" />
+
+        <Button
+
+            android:id="@+id/updateLectureDate"
+            android:layout_width="311dp"
+            android:layout_height="35dp"
+            android:background="@drawable/txtbox"
+            android:ems="10"
+            android:inputType="date"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/lecturetimeTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lecturedateTxt"
+            app:layout_constraintVertical_bias="0.533" />
+
+        <Button
+
+            android:id="@+id/updateLectureTime"
+            android:layout_width="311dp"
+            android:layout_height="35dp"
+            android:background="@drawable/txtbox"
+            android:ems="10"
+            android:inputType="time"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/lectureplaceTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lecturetimeTxt" />
+
+        <EditText
+
+            android:id="@+id/updateLecturePlace"
+            android:layout_width="311dp"
+            android:layout_height="31dp"
+            android:background="@drawable/txtbox"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/lectureConductuctedByTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lectureplaceTxt" />
+
+        <EditText
+
+            android:id="@+id/updateLectureConductedBy"
+            android:layout_width="311dp"
+            android:layout_height="31dp"
+            android:background="@drawable/txtbox"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/lectureNoteTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lectureConductuctedByTxt" />
+
+        <EditText
+
+            android:id="@+id/updateLectureSpecialNote"
+            android:layout_width="310dp"
+            android:layout_height="100dp"
+            android:background="@drawable/txtbox"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLength="50"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/updateLecturesaveButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lectureNoteTxt" />
+
+        <Button
+
+            android:id="@+id/updateLecturesaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/theme_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.917"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateLectureSpecialNote" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
