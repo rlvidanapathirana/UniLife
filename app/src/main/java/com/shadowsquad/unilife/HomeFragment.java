@@ -20,10 +20,10 @@ public class HomeFragment extends Fragment {
 //    private Context context;
 //    private DbHandler dbHandler;
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       return inflater.inflate(R.layout.fragment_home,container,false);
+//    @Nullable
+//    @Override
+//    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+//       return inflater.inflate(R.layout.fragment_home,container,false);
 
 //        countEvent = (TextView) view.findViewById(R.id.counterEventtext);
 //
@@ -36,5 +36,21 @@ public class HomeFragment extends Fragment {
 //
 
 
+    //EXAM COUNTER
+    private TextView countEvent ;
+    private Context context;
+    private DbHandler dbHandler;
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view =  inflater.inflate(R.layout.fragment_home,container,false);
+        countEvent = (TextView) view.findViewById(R.id.new123);
+
+        dbHandler = new DbHandler(getContext());
+        // get raw counts from table
+        int CountRaws = dbHandler.CountExamTodo();
+        countEvent.setText("you have "+CountRaws+" Event");
+
+        return view;
     }
 }

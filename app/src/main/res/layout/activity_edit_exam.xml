@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editExamPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    tools:context=".EditExam">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addExamHedder"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@color/theme_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="175dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.563"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/examhedder" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/editExamPageHedder"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.538"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <ImageButton
+            android:id="@+id/backArrowEditExam"
+            android:layout_width="43dp"
+            android:layout_height="27dp"
+            android:background="@color/theme_blue"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.043"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.098"
+            app:srcCompat="@drawable/arrow" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="355dp"
+        android:layout_height="491dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/theme_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addExamHedder">
+
+        <TextView
+            android:id="@+id/examNameTxt"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/examName"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/updateExamNameTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.082"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+
+            android:id="@+id/updateExamNameTxt"
+            android:layout_width="311dp"
+            android:layout_height="33dp"
+            android:background="@drawable/txtbox"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/dateTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/examNameTxt" />
+
+        <TextView
+            android:id="@+id/dateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/updateDateTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateExamNameTxt" />
+
+        <Button
+
+            android:id="@+id/updateDateTxt"
+            android:layout_width="311dp"
+            android:layout_height="35dp"
+            android:background="@drawable/txtbox"
+            android:ems="10"
+            android:inputType="date"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toTopOf="@+id/timeTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateTxt" /> <!-- Background --><![CDATA[
+
+        />
+
+
+
+
+
+
+        ]]>
+
+        <TextView
+            android:id="@+id/timeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/updateTimeTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.071"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateDateTxt" />
+
+        <Button
+
+            android:id="@+id/updateTimeTxt"
+            android:layout_width="311dp"
+            android:layout_height="35dp"
+            android:background="@drawable/txtbox"
+            android:ems="10"
+            android:inputType="time"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toTopOf="@+id/placeTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeTxt" /><![CDATA[-- Background -->/>
+
+
+
+
+        ]]>
+
+        <TextView
+            android:id="@+id/placeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/place"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/updatePlaceTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.071"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateTimeTxt" />
+
+        <EditText
+
+            android:id="@+id/updatePlaceTxt"
+            android:layout_width="311dp"
+            android:layout_height="33dp"
+            android:background="@drawable/txtbox"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/typeTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/placeTxt" />
+
+
+        <TextView
+            android:id="@+id/typeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/updateTypeTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updatePlaceTxt" />
+
+        <EditText
+
+            android:id="@+id/updateTypeTxt"
+            android:layout_width="311dp"
+            android:layout_height="33dp"
+            android:background="@drawable/txtbox"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/noteTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typeTxt" />
+
+
+        <TextView
+            android:id="@+id/noteTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/note"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/updateNoteTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.086"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateTypeTxt" />
+
+        <EditText
+
+            android:id="@+id/updateNoteTxt"
+            android:layout_width="310dp"
+            android:layout_height="95dp"
+            android:background="@drawable/txtbox"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/btnAddExamSave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noteTxt" />
+
+        <Button
+
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/update"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/theme_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.917"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateNoteTxt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

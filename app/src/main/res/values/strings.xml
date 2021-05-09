@@ -4,6 +4,7 @@
     <string name="exam">Exam</string>
     <string name="event">Event</string>
     <string name="lecture">Lecture</string>
+
     <string name="menu">menu</string>
     <string name="select">select</string>
     <string name="imageAdd">imageAdd</string>
@@ -20,9 +21,9 @@
     <string name="venue">Venue</string>
     <string name="startime">Start time</string>
     <string name="endtime">End time</string>
-    <string name="date">Date</string>
-    <string name="note">Note</string>
-    <string name="save">Save</string>
+    
+    
+    
     <string name="delete">Delete</string>
     <string name="datecrtpage" />
     <string name="editEventTopic">Edit event</string>
@@ -30,4 +31,20 @@
     <string name="EditEventtopic">Edit event</string>
     <string name="updatebtn">Update</string>
     <string name="Cleareventbtn">Clear</string>
+
+    <string name="exams">Exams</string>
+    <string name="add">add</string>
+    <string name="examHedderLogo">examHedderLogo</string>
+    <string name="addExamTxt">Add Exam</string>
+    <string name="examName">Exam Name</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="place">Place</string>
+    <string name="note">Note</string>
+    <string name="save">SAVE</string>
+    <string name="type">Type</string>
+    <string name="editExamPageHedder">Edit Exam</string>
+    <string name="update">UPDATE</string>
+    <string name="clear">CLEAR</string>
+
 </resources>

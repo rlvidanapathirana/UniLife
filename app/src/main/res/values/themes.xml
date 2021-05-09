@@ -3,7 +3,9 @@
     <style name="Theme.Unilife" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+
+        <item name="colorPrimaryVariant">@color/theme_blue</item>
+
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -14,20 +16,23 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
     </style>
+
 
 
     <!-- Alert Dialog -->
     <style name="ThemeOverlay.MaterialComponents.MaterialAlertDialog_Background" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <!-- Background Color-->
         <item name="android:background">@color/shadow_gray</item>
+
         <!-- Text Color for title and message -->
         <item name="colorOnSurface">@color/white</item>
         <!-- Style for positive button -->
         <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
-<!--        &lt;!&ndash; Style for negative button &ndash;&gt;-->
-<!--        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>-->
 
+        <!--        &lt;!&ndash; Style for negative button &ndash;&gt;-->
+        <!--        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>-->
 
     </style>
 
@@ -37,8 +42,6 @@
         <!-- Background tint for the button -->
         <item name="backgroundTint">@color/white</item>
     </style>
-
-
 
 
 </resources>
