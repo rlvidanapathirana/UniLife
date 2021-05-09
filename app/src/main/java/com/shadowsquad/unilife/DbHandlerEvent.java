@@ -17,7 +17,7 @@ import static java.time.LocalDateTime.MIN;
 
 public class DbHandlerEvent extends SQLiteOpenHelper {
     private static final int VERSION = 1;
-    private static final String DB_NAME = "unilife";
+    private static final String DB_NAME = "unilife1";
     private static final String EVENT_TABLE_NAME = "Event";
 
 

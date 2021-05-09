@@ -105,7 +105,7 @@ public class ExamFragment extends Fragment {
                         ExamFragment  examFragment = new ExamFragment() ;
                         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.fragment,examFragment);
+                        fragmentTransaction.replace(R.id.fragment_container,examFragment);
                         fragmentTransaction.addToBackStack(null);
                         fragmentTransaction.commit();
                     }

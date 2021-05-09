@@ -10,11 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unilife">
 
-        <activity android:name=".lounchhome"/>
         <activity android:name=".EditExam"></activity>
         <activity android:name=".todoexam" />
         <activity android:name=".AddExam" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".lounchhome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
