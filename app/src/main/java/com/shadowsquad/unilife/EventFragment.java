@@ -1,7 +1,5 @@
 package com.shadowsquad.unilife;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -33,7 +31,7 @@ public class EventFragment extends Fragment {
     private Button adder;
     private Context context;
     private List<EventModle> eventModles;
-    private DbHandler dbHandler;
+    private DbHandlerEvent dbHandlerEvent;
 
 
 
@@ -48,10 +46,10 @@ public class EventFragment extends Fragment {
          View View = inflater.inflate(R.layout.fragment_event,container,false);
 
          context= container.getContext();
-         dbHandler =new DbHandler (context);
+         dbHandlerEvent =new DbHandlerEvent(context);
          eventModles =new ArrayList<>();
 
-         eventModles = dbHandler.getallInsertedEvents();
+         eventModles = dbHandlerEvent.getallInsertedEvents();
          ListView listView = (ListView) View.findViewById(R.id.listViewbox);
 
          EventAdapter adapter= new EventAdapter(context,R.layout.activity_todoevent,eventModles);
@@ -112,7 +110,7 @@ public class EventFragment extends Fragment {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        dbHandler.deleteEventTodo(eventModle.getId());
+                        dbHandlerEvent.deleteEventTodo(eventModle.getId());
 
                         EventFragment  eventFragment= new EventFragment() ;
                         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();

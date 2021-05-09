@@ -6,10 +6,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -22,7 +20,7 @@ import java.util.Calendar;
 
 public class edit_event extends AppCompatActivity {
 
-    private DbHandler dbHandler;
+    private DbHandlerEvent dbHandlerEvent;
     private Context context;
     private Long updatedate;
     private EditText  eventName,presenter,venue,note;
@@ -49,7 +47,7 @@ public class edit_event extends AppCompatActivity {
 
 
         context =this;
-        dbHandler =new DbHandler(context);
+        dbHandlerEvent =new DbHandlerEvent(context);
 
         eventName = findViewById(R.id.updateEname);
         presenter = findViewById(R.id.updatePresentername);
@@ -71,7 +69,7 @@ public class edit_event extends AppCompatActivity {
 
 
         final String id =getIntent().getStringExtra("id");
-        EventModle eventModle =  dbHandler.getsingleTodo(Integer.parseInt(id)); //id eka string krgnnwa
+        EventModle eventModle =  dbHandlerEvent.getsingleTodo(Integer.parseInt(id)); //id eka string krgnnwa
 
 //        Log.i("DBH", "EventName => ");
          eventName.setText(eventModle.getEventName());
@@ -117,9 +115,8 @@ public class edit_event extends AppCompatActivity {
 
 
 
-                EventModle eventModle1 = new EventModle(eventId, eventNameText, presenterText, venueText,
-                        statTimeText, endTimeText,dateText, noteText, updatedate, 0);
-                int state = dbHandler.updateEventTodo(eventModle1);
+                EventModle eventModle1 = new EventModle(eventId, eventNameText, presenterText, venueText, statTimeText, endTimeText,dateText, noteText, updatedate, 0);
+                int state = dbHandlerEvent.updateEventTodo(eventModle1);
 //                int state = dbHandler.updateEventTodo(new EventModle());
 
                 String from = (" successfully updated  ");

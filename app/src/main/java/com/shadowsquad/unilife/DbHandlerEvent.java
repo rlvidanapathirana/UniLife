@@ -15,7 +15,7 @@ import java.util.List;
 import static android.icu.text.MessagePattern.ArgType.SELECT;
 import static java.time.LocalDateTime.MIN;
 
-public class DbHandler extends SQLiteOpenHelper {
+public class DbHandlerEvent extends SQLiteOpenHelper {
     private static final int VERSION = 1;
     private static final String DB_NAME = "unilife";
     private static final String EVENT_TABLE_NAME = "Event";
@@ -34,7 +34,7 @@ public class DbHandler extends SQLiteOpenHelper {
     private static final String FINISHED = "finished";
     private static final String STARTED = "started";
 
-    public DbHandler(@Nullable Context context) {
+    public DbHandlerEvent(@Nullable Context context) {
         super(context, DB_NAME, null, VERSION);
     }
 

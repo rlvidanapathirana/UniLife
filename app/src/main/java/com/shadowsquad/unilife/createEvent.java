@@ -1,38 +1,28 @@
 package com.shadowsquad.unilife;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.DatePickerDialog;
-import android.app.NotificationManager;
 import android.app.TimePickerDialog;
 import android.content.Context;
-import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EdgeEffect;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import java.io.Serializable;
 import java.util.Calendar;
 
 public class createEvent extends AppCompatActivity {
 
     private EditText eventName,presenter,venue,note;
     private Button sbtn,endTime,statTime,clear;
-    private DbHandler dbHandler;
+    private DbHandlerEvent dbHandlerEvent;
     private Context context;
     private ImageButton btn1;
 
@@ -62,7 +52,7 @@ public class createEvent extends AppCompatActivity {
         sbtn = findViewById(R.id.savebtn );
 
         context =this;
-        dbHandler =new DbHandler(context);
+        dbHandlerEvent =new DbHandlerEvent(context);
 
         //back button
 
@@ -122,7 +112,7 @@ public class createEvent extends AppCompatActivity {
 
 
                 EventModle eventModle = new EventModle(userEentname,userPresenter,userVenue,userStarttimer,userEndtime,userDate,userNote,started,0);
-                dbHandler.addCreateEvent(eventModle);
+                dbHandlerEvent.addCreateEvent(eventModle);
 
                 String from = ("successfully saved details");
                 Toast.makeText(context, from, Toast.LENGTH_SHORT).show();
