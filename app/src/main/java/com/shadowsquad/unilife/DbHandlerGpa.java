@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 
 public class DbHandlerGpa extends SQLiteOpenHelper {
         private static final int VERSION = 1;
-        private static final String DB_NAME = "unilife";
+        private static final String DB_NAME = "unilife2";
         private static final String GPA_TABLE_NAME = "gpa";
 
         //COLUMN NAMES

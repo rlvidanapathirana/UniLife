@@ -45,16 +45,15 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
     <ListView
         android:id="@+id/ListViewExam"
         android:layout_width="356dp"
         android:layout_height="423dp"
-        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/BtnOpenExam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1" />
 
     <ImageButton
         android:id="@+id/BtnOpenExam"
