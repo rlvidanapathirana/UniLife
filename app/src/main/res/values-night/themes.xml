@@ -3,7 +3,9 @@
     <style name="Theme.Unilife" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/white</item>
+
         <item name="colorPrimaryVariant">@color/theme_blue</item>
+
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -13,6 +15,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
 
     <!-- Alert Dialog -->
     <style name="ThemeOverlay.MaterialComponents.MaterialAlertDialog_Background" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
@@ -33,6 +36,5 @@
         <!-- Background tint for the button -->
         <item name="backgroundTint">@color/white</item>
     </style>
-
 
 </resources>
