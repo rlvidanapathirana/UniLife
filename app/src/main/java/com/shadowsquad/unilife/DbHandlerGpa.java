@@ -9,7 +9,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-public class DbHandler extends SQLiteOpenHelper {
+public class DbHandlerGpa extends SQLiteOpenHelper {
         private static final int VERSION = 1;
         private static final String DB_NAME = "unilife";
         private static final String GPA_TABLE_NAME = "gpa";
@@ -19,7 +19,7 @@ public class DbHandler extends SQLiteOpenHelper {
         private static final String CGPA = "cgpa";
         private static final String TARGET = "target_cgpa";
 
-        public DbHandler(@Nullable Context context) {
+        public DbHandlerGpa(@Nullable Context context) {
             super(context, DB_NAME, null, VERSION);
         }
 

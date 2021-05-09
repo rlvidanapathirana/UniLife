@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -23,7 +22,7 @@ public class HomeFragment extends Fragment {
     ImageButton addBtn;
     TextView txtCgpa, txtTarget, txtNeeded;
 
-    DbHandler dbHandler;
+    DbHandlerGpa dbHandlerGpa;
 //
     gpaModel gpamodel = null;
 
@@ -40,10 +39,10 @@ public class HomeFragment extends Fragment {
         addBtn = (ImageButton) view.findViewById(R.id.addImgBtn);
 
 
-        dbHandler = new DbHandler(getActivity().getApplicationContext());
-        boolean insert = dbHandler.insertgpa(1,"0","0");
+        dbHandlerGpa = new DbHandlerGpa(getActivity().getApplicationContext());
+        boolean insert = dbHandlerGpa.insertgpa(1,"0","0");
 
-        gpamodel = dbHandler.getSingle(1);
+        gpamodel = dbHandlerGpa.getSingle(1);
 
         txtCgpa.setText("CGPA = " + gpamodel.getCgpa());
         txtTarget.setText("Target CGPA = " + gpamodel.getTarget());
