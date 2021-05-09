@@ -53,8 +53,8 @@ public class EditLecture extends AppCompatActivity {
         specialNote = findViewById(R.id.updateLectureSpecialNote);
         updatebtn = findViewById(R.id.updateLecturesaveButton);
         backArrBtn =findViewById(R.id.backArrowImgBtn);
-
-        //back button
+//test
+        //back button implemntation
         backArrBtn = (ImageButton) findViewById(R.id.backArrowImgBtn);
         backArrBtn.setOnClickListener(new View.OnClickListener() {
             @Override
