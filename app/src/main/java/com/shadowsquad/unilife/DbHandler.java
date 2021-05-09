@@ -175,4 +175,15 @@ public class DbHandler extends SQLiteOpenHelper {
         return statusEvent;
 
     }
+
+    //Home Frag Exam Counter
+    public  int CountExamTodo(){
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM " + EXAM_TABLE_NAME;
+
+        Cursor cursor = db.rawQuery(query,null);
+        return cursor.getCount();
+
+    }
+
 }

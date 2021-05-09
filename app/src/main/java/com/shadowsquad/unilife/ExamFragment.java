@@ -38,18 +38,16 @@ public class ExamFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
        View View = inflater.inflate(R.layout.fragment_exam,container,false);
 
-        //context = this;
        //initialize examModels variable
-
         context = container.getContext();
         dbHandler = new DbHandler(context);
 
-        //listView =
+        //listView
         examModels = new ArrayList<>();
 
         examModels = dbHandler.getAllInsertedExamModel();
         ListView listView = (ListView) View.findViewById(R.id.ListViewExam);
-        // 28 - 28:07
+
         ExamAdapter examAdapter = new ExamAdapter(context,R.layout.activity_todoexam,examModels);
         listView.setAdapter(examAdapter);
 

@@ -59,7 +59,7 @@ public class EditExam extends AppCompatActivity {
         });
 //
         final String id =getIntent().getStringExtra("id");
-        ExamModel examModel =  dbHandler.getsingleExamTodo(Integer.parseInt(id)); //id eka string krgnnwa
+        ExamModel examModel =  dbHandler.getsingleExamTodo(Integer.parseInt(id)); //change ID to string
 //        Log.i("DBH", "EventName => ");
         examName.setText(examModel.getExamName());
         date.setText(examModel.getDate());
@@ -83,10 +83,11 @@ public class EditExam extends AppCompatActivity {
 
 
                 updatedate = System.currentTimeMillis();
-                ; //danata tyena sytem eke welawa gnnwa
+                ; //get current system time
 
-                //
-                ExamModel examModel = new ExamModel(Integer.parseInt(id), examNameText, dateText, timeText, placeText, typeText, noteText, updatedate, 0);
+
+                ExamModel examModel = new ExamModel(Integer.parseInt(id), examNameText, dateText, timeText,
+                        placeText, typeText, noteText, updatedate, 0);
 
                 int state = dbHandler.updateExamTodo(examModel);
 

@@ -117,7 +117,7 @@ public class AddExam extends AppCompatActivity {
                     dbHandler.addExam(examModel);
 
                     //Toast Message
-                    String saveBtn = "Success";
+                    String saveBtn = "Successfully saved exam details";
                     Toast.makeText(context, saveBtn, Toast.LENGTH_SHORT).show();
 
                     //Transaction add exam act to exam frag click save btn  and Reload
