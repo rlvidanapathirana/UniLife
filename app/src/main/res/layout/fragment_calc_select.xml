@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calcSelect">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="153dp"
+        android:background="@color/theme_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="190dp"
+        tools:layout_conversion_absoluteWidth="411dp">
+
+        <TextView
+            android:id="@+id/calcText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gpaCalc"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:layout_conversion_absoluteHeight="49dp"
+            tools:layout_conversion_absoluteWidth="248dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="89dp"
+            android:layout_height="79dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/examHedderLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_calculate_24"
+            tools:layout_conversion_absoluteHeight="89dp"
+            tools:layout_conversion_absoluteWidth="175dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/gpaReminder"
+        android:layout_width="411dp"
+        android:layout_height="579dp"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1">
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout1">
+
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/universityView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="@string/university" />
+
+                <Spinner
+                    android:id="@+id/universitySpinner"
+                    android:layout_width="328dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:id="@+id/facultyView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="@string/faculty" />
+
+                <Spinner
+                    android:id="@+id/facultySpinner"
+                    android:layout_width="328dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/specializeView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/specialization"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="21dp"
+                    tools:layout_editor_absoluteY="115dp" />
+
+                <Spinner
+                    android:id="@+id/specializeSpinner"
+                    android:layout_width="328dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    tools:layout_editor_absoluteX="21dp"
+                    tools:layout_editor_absoluteY="146dp" />
+
+                <TextView
+                    android:id="@+id/batchView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/batch"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="21dp"
+                    tools:layout_editor_absoluteY="195dp" />
+
+
+                <Spinner
+                    android:id="@+id/batchSpinner"
+                    android:layout_width="331dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    tools:layout_editor_absoluteX="18dp"
+                    tools:layout_editor_absoluteY="226dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btngpa"
+                        android:layout_width="105dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="@color/theme_blue"
+                        android:text="@string/gpa"
+                        android:textColor="@color/white"
+                        tools:layout_editor_absoluteX="256dp"
+                        tools:layout_editor_absoluteY="281dp" />
+
+                    <Button
+                        android:id="@+id/btncgpa"
+                        android:layout_width="105dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="@color/theme_blue"
+                        android:text="@string/cgpa"
+                        android:textColor="@color/white"
+                        tools:layout_editor_absoluteX="256dp"
+                        tools:layout_editor_absoluteY="281dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

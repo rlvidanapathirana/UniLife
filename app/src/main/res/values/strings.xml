@@ -43,8 +43,51 @@
     <string name="note">Note</string>
     <string name="save">SAVE</string>
     <string name="type">Type</string>
+
+    <string name="gpaCalc">GPA Calculator</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="faculty">Faculty</string>
+    <string name="specialization">Specialization</string>
+    <string name="batch">Batch</string>
+    <string name="gpa">GPA</string>
+    <string name="cgpa">CGPA</string>
+    <string name="target">Target CGPA</string>
+    <string name="university">University</string>
+
+    <string-array name="university">
+        <item>SLIIT</item>
+    </string-array>
+
+    <string-array name="facultyArr">
+        <item>Faculty of Computing</item>
+    </string-array>
+
+    <string-array name="special">
+        <item>Data Science</item>
+        <item>Software Engineering</item>
+        <item>Information Technology</item>
+        <item>Interactive Media</item>
+        <item>Computer Systems and Network Engineering</item>
+        <item>Information Systems Engineering</item>
+        <item>Cyber Security</item>
+    </string-array>
+
+    <string-array name="batchArr">
+        <item>Y1S1</item>
+        <item>Y1S2</item>
+        <item>Y2S1</item>
+        <item>Y2S2</item>
+        <item>Y3S1</item>
+        <item>Y3S2</item>
+        <item>Y4S1</item>
+        <item>Y4S2</item>
+    </string-array>
+
+
     <string name="editExamPageHedder">Edit Exam</string>
     <string name="update">UPDATE</string>
     <string name="clear">CLEAR</string>
+
 
 </resources>
