@@ -9,30 +9,23 @@
         android:roundIcon="@mipmap/unilife_app_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Unilife">
-
-        <activity android:name=".EditExam"></activity>
+        <activity android:name=".AddExam"></activity>
+        <activity android:name=".EditExam" />
         <activity android:name=".todoexam" />
-        <activity android:name=".AddExam" />
-        <activity android:name=".lounchhome">
-        <activity android:name=".EditLecture"></activity>
-        <activity android:name=".todoLecture"></activity>
+        <activity android:name=".EditLecture" />
+        <activity android:name=".todoLecture" />
         <activity android:name=".AddLecture" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".lounchhome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".edit_event" />
-<!--        <activity android:name=".Update_Event1" />-->
-<!--        <activity android:name=".update_event" />-->
+        <activity android:name=".edit_event" /> <!-- <activity android:name=".Update_Event1" /> -->
+        <!-- <activity android:name=".update_event" /> -->
         <activity android:name=".todoevent" />
         <activity android:name=".createEvent" />
-
-
-
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

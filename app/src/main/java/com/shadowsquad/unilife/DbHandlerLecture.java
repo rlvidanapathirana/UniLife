@@ -15,7 +15,7 @@ import java.util.List;
 
 public class DbHandlerLecture extends SQLiteOpenHelper {
     private static final int VERSION = 1;
-    private static final String DB_NAME = "unilife";
+    private static final String DB_NAME = "unilife3";
     private static final String lECTURE_TABLE_NAME = "lecture";
 
     // Column names of the table

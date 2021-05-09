@@ -23,7 +23,6 @@
     <string name="endtime">End time</string>
 
 
-
     <string name="delete">Delete</string>
     <string name="datecrtpage" />
     <string name="editEventTopic">Edit event</string>
@@ -86,8 +85,7 @@
 
 
     <string name="editExamPageHedder">Edit Exam</string>
-    <string name="update">UPDATE</string>
-    <string name="clear">CLEAR</string>
+
 
 
     <string name="lectureHedder">Add Lecture</string>
