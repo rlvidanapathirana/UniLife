@@ -181,15 +181,11 @@ public class DbHandler extends SQLiteOpenHelper {
         contentValues.put(STARTED, eventModle.getStarted());
 
 
-        int statusEvent = sqLiteDatabase.update(EVENT_TABLE_NAME, contentValues, ID +"  =?", new String[]{String.valueOf(eventModle.getId())});
-
+        int statusEvent = sqLiteDatabase.update(EVENT_TABLE_NAME, contentValues, ID +"  =?",
+                new String[]{String.valueOf(eventModle.getId())});
         //  Log.i("ABC",String.valueOf(eventModle.getId() + " " ));
-
-
         sqLiteDatabase.close();
         return statusEvent;
-
-
     }
 
     //item delete in listview

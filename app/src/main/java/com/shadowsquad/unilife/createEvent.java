@@ -121,19 +121,6 @@ public class createEvent extends AppCompatActivity {
                 }
 
 
-                //notification
-
-//                NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(),"my nofication")
-//                        .setSmallIcon(R.drawable.ic_notificatin_mail)
-//                        .setContentTitle( "Notification")
-//                        .setContentText(" successfully save details")
-//                        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-//                        .setAutoCancel(true);
-//
-//                NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(getApplicationContext());
-//                notificationManagerCompat.notify(0, builder.build());
-
-
                 EventModle eventModle = new EventModle(userEentname,userPresenter,userVenue,userStarttimer,userEndtime,userDate,userNote,started,0);
                 dbHandler.addCreateEvent(eventModle);
 

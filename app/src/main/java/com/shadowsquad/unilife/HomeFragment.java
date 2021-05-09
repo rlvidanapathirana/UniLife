@@ -15,26 +15,26 @@ public class HomeFragment extends Fragment {
 
 
 
-    //COUNTER
-    private TextView countEvent ;
-    private Context context;
-    private DbHandler dbHandler;
+//    //COUNTER
+//    private TextView countEvent ;
+//    private Context context;
+//    private DbHandler dbHandler;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       View view =  inflater.inflate(R.layout.fragment_home,container,false);
+       return inflater.inflate(R.layout.fragment_home,container,false);
 
-        countEvent = (TextView) view.findViewById(R.id.counterEventtext);
+//        countEvent = (TextView) view.findViewById(R.id.counterEventtext);
+//
+//
+//        dbHandler = new DbHandler(getContext());
+//
+//        // get raw counts from table
+//        int CountRaws = dbHandler.CountEventTodo();
+//        countEvent.setText("you have "+CountRaws+" Event");
+//
 
 
-        dbHandler = new DbHandler(getContext());
-
-        // get raw counts from table
-        int CountRaws = dbHandler.CountEventTodo();
-        countEvent.setText("you have "+CountRaws+" Event");
-
-
-        return view;
     }
 }

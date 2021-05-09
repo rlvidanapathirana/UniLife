@@ -74,7 +74,6 @@ public class edit_event extends AppCompatActivity {
         EventModle eventModle =  dbHandler.getsingleTodo(Integer.parseInt(id)); //id eka string krgnnwa
 
 //        Log.i("DBH", "EventName => ");
-
          eventName.setText(eventModle.getEventName());
          presenter.setText(eventModle.getPresenter());
          venue.setText(eventModle.getVenue());
@@ -85,12 +84,8 @@ public class edit_event extends AppCompatActivity {
 
          //update button
         savedata.setOnClickListener(new View.OnClickListener() {
-            //private EventFragment  eventFragment;
-
             @Override
             public void onClick(View v) {
-
-
                 int eventId = eventModle.getId();
                 String eventNameText = eventName.getText().toString();
                 String presenterText = presenter.getText().toString();
@@ -122,7 +117,8 @@ public class edit_event extends AppCompatActivity {
 
 
 
-                EventModle eventModle1 = new EventModle(eventId, eventNameText, presenterText, venueText, statTimeText, endTimeText,dateText, noteText, updatedate, 0);
+                EventModle eventModle1 = new EventModle(eventId, eventNameText, presenterText, venueText,
+                        statTimeText, endTimeText,dateText, noteText, updatedate, 0);
                 int state = dbHandler.updateEventTodo(eventModle1);
 //                int state = dbHandler.updateEventTodo(new EventModle());
 
@@ -134,13 +130,6 @@ public class edit_event extends AppCompatActivity {
                  //activity to fragment
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.editieventpage,new EventFragment()).commit();
-
-
-
-
-
-
-
 
             }
         });
