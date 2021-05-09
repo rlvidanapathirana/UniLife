@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DbHandler extends SQLiteOpenHelper {
+public class DbHandlerLecture extends SQLiteOpenHelper {
     private static final int VERSION = 1;
     private static final String DB_NAME = "unilife";
     private static final String lECTURE_TABLE_NAME = "lecture";
@@ -30,7 +30,7 @@ public class DbHandler extends SQLiteOpenHelper {
     private static final String FINISHED = "finished";
 
 
-    public DbHandler(@Nullable Context context) {
+    public DbHandlerLecture(@Nullable Context context) {
         super(context, DB_NAME, null, VERSION);
     }
 

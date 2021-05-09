@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
     //COUNTER
     private TextView countLecture ;
     private Context context;
-    private DbHandler dbHandler;
+    private DbHandlerLecture dbHandlerLecture;
 
     @Nullable
     @Override
@@ -48,10 +48,10 @@ public class HomeFragment extends Fragment {
         countLecture = (TextView) view.findViewById(R.id.counterLectureText);
 
 
-        dbHandler = new DbHandler(getContext());
+        dbHandlerLecture = new DbHandlerLecture(getContext());
 
         // get raw counts from table
-        int CountRaws = dbHandler.CountLectureTodo();
+        int CountRaws = dbHandlerLecture.CountLectureTodo();
         countLecture.setText("you have "+CountRaws+" Lectures");
 
 

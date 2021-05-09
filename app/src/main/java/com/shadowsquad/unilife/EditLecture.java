@@ -22,7 +22,7 @@ public class EditLecture extends AppCompatActivity {
 
     private EditText name,place, conductedBy, specialNote;
     private Button updatebtn,clear, date, time;
-    private DbHandler dbHandler;
+    private DbHandlerLecture dbHandlerLecture;
     private Context context;
     private Long updatedate;
     private ImageButton backArrBtn;
@@ -43,7 +43,7 @@ public class EditLecture extends AppCompatActivity {
         setContentView(R.layout.activity_edit_lecture);
 
         context= this;
-        dbHandler = new DbHandler(context);
+        dbHandlerLecture = new DbHandlerLecture(context);
 
         name = findViewById(R.id.updateLectureName);
         date = findViewById(R.id.updateLectureDate);
@@ -66,7 +66,7 @@ public class EditLecture extends AppCompatActivity {
 
 
         final String id = getIntent().getStringExtra("id");
-        Lecture lecture = dbHandler.getsingleLectureTodo(Integer.parseInt(id)); //id eka string krgnnwa
+        Lecture lecture = dbHandlerLecture.getsingleLectureTodo(Integer.parseInt(id)); //id eka string krgnnwa
 //        Log.i("DBH", "EventName => ");
         name.setText(lecture.getName());
         date.setText(lecture.getDate());
@@ -119,7 +119,7 @@ public class EditLecture extends AppCompatActivity {
                 updatedate = System.currentTimeMillis();
                 //danata tyena sytem eke welawa gnnwa
                 Lecture lecture1 = new Lecture(lecturetId, LecturetNameText, LectureDateText, LectureTimetext, LecturePlaceText, LectureConductedByText,LecturesepecialNotText, updatedate, 0);
-                int state = dbHandler.updateLectureTodo(lecture1);
+                int state = dbHandlerLecture.updateLectureTodo(lecture1);
 //                int state = dbHandler.updateEventTodo(new EventModle());
                 String from = (" successfully updated  ");
                 Toast.makeText(context, from, Toast.LENGTH_LONG).show();

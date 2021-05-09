@@ -31,7 +31,7 @@ private ImageButton imgadd;
 private ListView listView;
 private TextView count;
 private Context  context;
-private DbHandler dbHandler;
+private DbHandlerLecture dbHandlerLecture;
 private List<Lecture>lectures;
     @Nullable
     @Override
@@ -42,9 +42,9 @@ private List<Lecture>lectures;
         listView = (ListView) View.findViewById(R.id.lectureList);
         context = container.getContext();
 
-        dbHandler =   new DbHandler(context);
+        dbHandlerLecture =   new DbHandlerLecture(context);
         lectures =new ArrayList<>();
-        lectures = dbHandler.getallInsertedLecture();
+        lectures = dbHandlerLecture.getallInsertedLecture();
         LectureAdapter adapter= new LectureAdapter(context,R.layout.activity_todo_lecture,lectures);
         listView.setAdapter(adapter);
 
@@ -94,7 +94,7 @@ private List<Lecture>lectures;
                 builder.setNegativeButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        dbHandler.deleteLectureTodo(lecture.getId());
+                        dbHandlerLecture.deleteLectureTodo(lecture.getId());
 
 
                         LectureFragment lectureFragment = new LectureFragment();

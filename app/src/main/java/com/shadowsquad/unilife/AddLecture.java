@@ -6,7 +6,6 @@ import androidx.fragment.app.FragmentTransaction;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -23,7 +22,7 @@ public class AddLecture extends AppCompatActivity {
 
     private EditText name, place, conductedBy, specialNote;
     private Button add,clear,date,time;
-    private DbHandler dbHandler;
+    private DbHandlerLecture dbHandlerLecture;
     private Context context;
     private ImageButton backbtn;
 
@@ -75,7 +74,7 @@ public class AddLecture extends AppCompatActivity {
 
         context = this;
 
-        dbHandler = new DbHandler(context);
+        dbHandlerLecture = new DbHandlerLecture(context);
 //save Button
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,7 +116,7 @@ public class AddLecture extends AppCompatActivity {
 
 
                 Lecture lecture = new Lecture(userName,userDate,userTime,userPlace,userConductedBy,userSpecialNote,started,0);
-                dbHandler.addLecture(lecture);
+                dbHandlerLecture.addLecture(lecture);
 
 
                 String from = ("Details saved successfully");
