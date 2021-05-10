@@ -82,8 +82,8 @@
 
     <ImageButton
         android:id="@+id/addEventcrt"
-        android:layout_width="74dp"
-        android:layout_height="65dp"
+        android:layout_width="67dp"
+        android:layout_height="58dp"
         android:layout_marginBottom="4dp"
         android:background="@color/theme_white"
         android:contentDescription="@string/imageAdd"
@@ -91,7 +91,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
-        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintHorizontal_bias="0.915"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listViewboxLayout"

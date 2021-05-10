@@ -122,6 +122,7 @@ public class createEvent extends AppCompatActivity {
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.createpage,new EventFragment()).commit();
 
+              //  fragmentTransaction.addToBackStack(null);
 
 //                NotificationManager notificationManager =(NotificationManager)
 //                getSystemService(NOTIFICATION_SERVICE);
