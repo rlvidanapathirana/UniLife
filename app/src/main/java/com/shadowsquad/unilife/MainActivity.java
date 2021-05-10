@@ -9,16 +9,21 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
    private  ImageButton menubtn;
+   static Fragment selectedFragment = null;
+    private Context context = this;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Bottom Nav bar
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView = findViewById(R.id.bottom_nav);
 
 
 
@@ -37,28 +42,20 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
 
        // final MainActivity RelativeLayout = findViewById(R.id.mainAcitiviy);
-
-
-
-
-
-
-
-
-
     }
+
+
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-            Fragment selectedFragment=null;
             switch (item.getItemId())
             {
                 case R.id.home:
-                selectedFragment= new HomeFragment();
-                break;
+                    selectedFragment= new HomeFragment();
+                    break;
 
                 case R.id.exam:
                     selectedFragment= new ExamFragment();
@@ -72,11 +69,21 @@ public class MainActivity extends AppCompatActivity {
                     selectedFragment= new LectureFragment();
                     break;
             }
-
-getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
             return true;
         }
     };
 
+//=====================================Dineth
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(context, "ON RESUME", Toast.LENGTH_SHORT).show();
+
+    }
+
+    public static Fragment getSelectedFragment() {
+        return selectedFragment;
+    }
 }

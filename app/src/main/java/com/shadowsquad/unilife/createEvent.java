@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -18,7 +19,7 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class createEvent extends AppCompatActivity {
+public class createEvent extends AppCompatActivity { //Dineth changed
 
     private EditText eventName,presenter,venue,note;
     private Button sbtn,endTime,statTime,clear;
@@ -119,8 +120,15 @@ public class createEvent extends AppCompatActivity {
 
                 //after click the save button gose to fragment
 
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.createpage,new EventFragment()).commit();
+
+                Intent openMainActivity = new Intent(createEvent.this, MainActivity.class);
+                openMainActivity.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivityIfNeeded(openMainActivity, 0);
+
+//                -----------------------------------------
+//                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//                fragmentTransaction.replace(R.id.createpage,new EventFragment()).commit();
+//                -----------------------------------------
 
               //  fragmentTransaction.addToBackStack(null);
 
@@ -217,7 +225,6 @@ public class createEvent extends AppCompatActivity {
 
 
     }
-
 
 
 }

@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -121,8 +122,16 @@ public class AddExam extends AppCompatActivity {
                     Toast.makeText(context, saveBtn, Toast.LENGTH_SHORT).show();
 
                     //Transaction add exam act to exam frag click save btn  and Reload
-                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.addExamActivity, new ExamFragment()).commit();
+//                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//                    fragmentTransaction.replace(R.id.addExamActivity, new ExamFragment()).commit();
+
+
+                    Intent openMainActivity = new Intent(AddExam.this, MainActivity.class);
+                    openMainActivity.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                    startActivityIfNeeded(openMainActivity, 0);
+
+
+
                 }
 
 
