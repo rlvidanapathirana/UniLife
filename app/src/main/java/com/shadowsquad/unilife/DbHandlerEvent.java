@@ -195,5 +195,7 @@ public class DbHandlerEvent extends SQLiteOpenHelper {
         db.delete(EVENT_TABLE_NAME, ID + " =?", new String[]{String.valueOf(id)});
         db.close();
 
+
+
     }
 }

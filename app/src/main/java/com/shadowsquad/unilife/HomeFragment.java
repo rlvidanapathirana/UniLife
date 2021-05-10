@@ -54,31 +54,22 @@ public class HomeFragment extends Fragment {
 
 
 
-//    //COUNTER
-//    private TextView countEvent ;
-//    private Context context;
-//    private DbHandler dbHandler;
+    //COUNTERS
 
-//    @Nullable
-//    @Override
-//    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//       return inflater.inflate(R.layout.fragment_home,container,false);
+    private TextView countExam,countEvent, countLecture;
+    private Context context;
+    private DbHandler dbHandler;
+    private DbHandlerEvent dbHandlerEvent;
+    private DbHandlerLecture dbHandlerLecture;
 
-//        countEvent = (TextView) view.findViewById(R.id.counterEventtext);
 //
 //
-//        dbHandler = new DbHandler(getContext());
 //
-//        // get raw counts from table
-//        int CountRaws = dbHandler.CountEventTodo();
-//        countEvent.setText("you have "+CountRaws+" Event");
+//
+//
 //
 
 
-    //EXAM COUNTER
-   // private TextView countEvent ;
-    //private Context context;
-    //private DbHandler dbHandler;
 
     @Nullable
     @Override
@@ -123,6 +114,29 @@ public class HomeFragment extends Fragment {
 
         needed(Double.parseDouble(gpamodel.getTarget()) - Double.parseDouble(gpamodel.getCgpa()));
 
+//COUNTER
+        dbHandler = new DbHandler(getContext());
+        dbHandlerEvent = new DbHandlerEvent(getContext());
+        dbHandlerLecture = new DbHandlerLecture(getContext());
+
+
+
+        //COUNTER TEXT
+        countExam = (TextView) view.findViewById(R.id.ExamCountTextView);
+        countEvent = (TextView) view.findViewById(R.id.EventCountTextView);
+        countLecture = (TextView) view.findViewById(R.id.LectureCountTextView);
+
+        //METHORD
+        //get raw counts from table
+        int CountRawsExams = dbHandler.CountExamTodo();
+        countExam.setText("You have added "+CountRawsExams+" Exams");
+
+        int CountRawsEvents = dbHandlerEvent.CountEventTodo();
+        countEvent.setText("You have added "+CountRawsEvents+" Events");
+
+        int CountRawsLectures = dbHandlerLecture.CountLectureTodo();
+        countLecture.setText("You have added "+CountRawsLectures+" Lectures");
+
         return view;
     }
 
@@ -139,6 +153,11 @@ public class HomeFragment extends Fragment {
         else {
             txtNeeded.setText("You have\nachieved\nyour target\nCGPA");
         }
+
+
     }
+
+
+
 
 }
