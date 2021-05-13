@@ -168,7 +168,7 @@ public class DbHandler extends SQLiteOpenHelper {
         contentValues.put(STARTED,examModel.getStarted());
         contentValues.put(FINISHED,examModel.getFinished());
         int statusEvent = sqLiteDatabase.update(EXAM_TABLE_NAME, contentValues, ID + " =?",
-                new String[]{String.valueOf(examModel.getId())}); //kochchra raw premanayk upddate unda blnda int eka danwa
+                new String[]{String.valueOf(examModel.getId())}); //use int to check how many data updated
         //Log.i("DBH", "DATA SAVED! ==> Status Event : " + statusEvent);
 
         sqLiteDatabase.close();

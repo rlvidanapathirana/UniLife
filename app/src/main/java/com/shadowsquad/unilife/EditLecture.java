@@ -117,7 +117,7 @@ public class EditLecture extends AppCompatActivity {
 
 
                 updatedate = System.currentTimeMillis();
-                //danata tyena sytem eke welawa gnnwa
+                //Get update time on system time
                 Lecture lecture1 = new Lecture(lecturetId, LecturetNameText, LectureDateText, LectureTimetext, LecturePlaceText, LectureConductedByText,LecturesepecialNotText, updatedate, 0);
                 int state = dbHandlerLecture.updateLectureTodo(lecture1);
 //                int state = dbHandler.updateEventTodo(new EventModle());

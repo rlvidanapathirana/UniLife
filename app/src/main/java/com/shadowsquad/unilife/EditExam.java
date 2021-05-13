@@ -58,6 +58,8 @@ public class EditExam extends AppCompatActivity {
             }
         });
 //
+
+        //EDIT EXAM DATA SET TO VALUES
         final String id =getIntent().getStringExtra("id");
         ExamModel examModel =  dbHandler.getsingleExamTodo(Integer.parseInt(id)); //change ID to string
 //        Log.i("DBH", "EventName => ");
