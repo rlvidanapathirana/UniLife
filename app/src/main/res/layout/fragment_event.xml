@@ -36,16 +36,17 @@
             android:layout_width="211dp"
             android:layout_height="54dp"
             android:layout_marginTop="16dp"
-            android:text="@string/Event_reminder"
+            android:text="@string/event12"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/eventhome" />
 
-<!--        <ImageButton-->
+        <!--        <ImageButton-->
 <!--            android:id="@+id/imageMenu"-->
 <!--            android:layout_width="38dp"-->
 <!--            android:layout_height="27dp"-->

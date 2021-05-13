@@ -30,26 +30,16 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="136dp"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/eventnameview"
+                    android:layout_width="159dp"
+                    android:layout_height="35dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="24dp"
                     android:text=" EVENT NAME"
                     android:textColor="@color/black"
                     android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/eventnameview"
-                    android:layout_width="160dp"
-                    android:layout_height="34dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="10dp"
-                    android:text=" TextView"
-                    android:textColor="@color/black"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="16dp" />
+                    android:textStyle="bold"
+                    />
 
 
             </LinearLayout>

@@ -98,4 +98,5 @@
     <string name="edit">"Edit "</string>
     <string name="clear">Clear</string>
     <string name="editLectureTopic">Edit Lecture</string>
+    <string name="event12">Event</string>
 </resources>
