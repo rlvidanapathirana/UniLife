@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -125,8 +126,12 @@ public class edit_event extends AppCompatActivity {
                 // startActivity(new Intent(context,MainActivity.class));
 
                  //activity to fragment
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.editieventpage,new EventFragment()).commit();
+//                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//                fragmentTransaction.replace(R.id.editieventpage,new EventFragment()).commit();
+
+                Intent openMainActivity = new Intent(edit_event.this, MainActivity.class);
+                openMainActivity.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivityIfNeeded(openMainActivity, 0);
 
             }
         });

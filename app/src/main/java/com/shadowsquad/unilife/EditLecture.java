@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -125,8 +126,13 @@ public class EditLecture extends AppCompatActivity {
                 Toast.makeText(context, from, Toast.LENGTH_LONG).show();
                 // startActivity(new Intent(context,MainActivity.class));
                 //activity to fragment
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.editLecturePage,new LectureFragment()).commit();
+//                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//                fragmentTransaction.replace(R.id.editLecturePage,new LectureFragment()).commit();
+
+
+                Intent openMainActivity = new Intent(EditLecture.this, MainActivity.class);
+                openMainActivity.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivityIfNeeded(openMainActivity, 0);
             }
         });
 
